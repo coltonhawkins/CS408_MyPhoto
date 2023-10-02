@@ -9,8 +9,9 @@ header {
 }
 
 header img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Allow the image height to adjust proportionally */
     margin-right: 1em; /* Margin for the logo image (using em) */
-    height: 8vw; /* Adjust the height of the logo (using vw) */
 }
 
 /* Navigation Styles */
@@ -36,7 +37,7 @@ nav a {
     font-weight: bold; /* Bold text for links */
     padding: 0.5em 1em; /* Padding around links (using em) */
     border-radius: 5px; /* Rounded corners for links */
-    font-size: 1.8em; /* Slightly larger font size (adjust as needed) */
+    font-size: 1.8em; /* Font size for menu text (adjust as needed) */
 }
 
 /* Menu Hover Effect */
