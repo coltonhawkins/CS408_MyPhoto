@@ -20,7 +20,7 @@ body h1,
 h2 {
     font-size: 2em; /* Increase the font size */
     color: #333; /* Text color for h2 tags */
-    background-color: #ff6600; /* Background color for h2 tags */
+    background-color: #3498db; /* Background color for h2 tags */
     padding: 10px; /* Padding around h2 tags */
     border-radius: 5px; /* Rounded corners for h2 tags */
     text-align: center; /* Center-align h2 text */
@@ -31,7 +31,7 @@ h2 {
 /* Explore the Feed Button Styles */
 .cta-button {
     display: inline-block;
-    background-color: #ff6600; /* Background color for the button */
+    background-color: #3498db; /* Background color for the button */
     color: #fff; /* Text color for the button */
     text-decoration: none; /* Remove underlines from the button */
     padding: 10px 20px; /* Padding around the button text */
@@ -44,6 +44,6 @@ h2 {
 
 /* Hover Effect for the Button */
 .cta-button:hover {
-    background-color: #ff3300; /* Background color on hover (slightly darker) */
+    background-color: #3498db; /* Background color on hover (slightly darker) */
     transition: background-color 0.3s; /* Smooth color transition on hover */
 }
