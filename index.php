@@ -1,1 +1,8 @@
-<?php include_once("home.html"); ?>
+<?php 
+    require_once("home.html"); 
+    
+
+
+
+
+?>
