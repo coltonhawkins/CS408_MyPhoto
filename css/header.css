@@ -33,7 +33,7 @@ nav li {
 
 nav a {
     text-decoration: none; /* Remove underlines from links */
-    color: #ff6600; /* Text color for links */
+    color: #fafafa; /* Text color for links */
     font-weight: bold; /* Bold text for links */
     padding: 0.5em 1em; /* Padding around links (using em) */
     border-radius: 5px; /* Rounded corners for links */
@@ -43,5 +43,5 @@ nav a {
 
 /* Menu Hover Effect */
 nav a:hover {
-    background-color: #555; /* Background color on hover */
+    background-color: #eb921c; /* Background color on hover */
 }
