@@ -1,5 +1,5 @@
 <?php 
-    require_once("home.html"); 
+    require_once("pages/home.html"); 
     
 
 
