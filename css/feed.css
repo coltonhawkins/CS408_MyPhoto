@@ -1,0 +1,51 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Main content styles */
+h1, h2, h3 {
+    color: #333;
+}
+
+#feed-section {
+    padding: 20px;
+}
+
+#feed-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+/* Grid of Photos styles */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.photo-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.photo-card p {
+    padding: 10px;
+}
+

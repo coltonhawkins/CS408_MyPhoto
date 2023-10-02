@@ -15,8 +15,11 @@
 
     <section id="feed-section">
         <h2>Photo Feed</h2>
+        // Add a grid of photos here 
 
-        //Insert database code here
-        <?php include 'footer.php'; ?>
+        <p>Explore the latest photos shared by our talented photographers. Click on each photo to view it in full size and learn more about the photographers and their work.</p>
+    </section>
+
+    <?php include 'footer.php'; ?>
 </body>
 </html>
