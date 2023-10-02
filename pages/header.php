@@ -6,8 +6,8 @@
     <title>Home</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../favicon/logo.icon" type="image/x-icon">
-    <link rel="shortcut icon" href="../favicon/logo.icon" type="image/x-icon">
+    <link rel="icon" href="../favicon/favicon.icon" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon/favicon.icon" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
