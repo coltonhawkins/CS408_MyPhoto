@@ -22,8 +22,7 @@
         <h2>Featured Photos</h2>
         <!-- Add a grid of featured photos here -->
     </section>
-    <div id="footer">
-        <?php include 'footer.php'; ?>
-    </div>
+    
+    <?php include 'footer.php'; ?>
 </body>
 </html>

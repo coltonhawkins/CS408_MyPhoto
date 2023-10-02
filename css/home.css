@@ -48,6 +48,3 @@ h2 {
     transition: background-color 0.3s; /* Smooth color transition on hover */
 }
 
-.footer{
-    bottom: 0; /* Position the footer at the bottom of the content */
-}

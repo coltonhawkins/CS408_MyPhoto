@@ -90,6 +90,3 @@ h3 {
 .upload-button input[type="submit"]:hover {
     background-color: #258cd1;
 }
-.footer{
-    bottom: 0; /* Position the footer at the bottom of the content */
-}

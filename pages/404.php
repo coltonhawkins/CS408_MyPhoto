@@ -15,8 +15,6 @@
         <p>The page you are looking for could not be found.</p>
         <p>Return to the <a href="../pages/home.php">homepage</a>.</p>
     </div>
-    <div id="footer">
-        <?php include 'footer.php'; ?>
-    </div>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

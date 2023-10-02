@@ -3,9 +3,7 @@ footer {
     background-color: #333; /* Background color for the footer */
     color: #fff; /* Text color for the footer */
     text-align: center; /* Center-align the content */
-    padding: 10px 0; /* Padding around the footer content */
-    width: 100%; /* Full width footer */
+    padding: 20px 0; /* Padding around the footer content */
     font-size: 14px; /* Font size for footer text */
-    position: absolute; /* Position the footer absolutely */
-    bottom: 0; /* Position the footer at the bottom of the content */
+   
 }
