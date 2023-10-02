@@ -2,15 +2,15 @@
 header {
     background-color: #333; /* Background color for the header */
     color: #fff; /* Text color for the header */
-    padding: 10px; /* Padding around the header content */
+    padding: 1em; /* Padding around the header content (using em) */
     display: flex; /* Use flexbox to align elements */
     align-items: center; /* Vertically align elements */
     justify-content: flex-start; /* Align elements to the left */
 }
 
 header img {
-    margin-right: 10px; /* Margin for the logo image */
-    height: 100px; /* Adjust the height of the logo */
+    margin-right: 1em; /* Margin for the logo image (using em) */
+    height: 8vw; /* Adjust the height of the logo (using vw) */
 }
 
 /* Navigation Styles */
@@ -27,16 +27,16 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 0 10px; /* Add margin to separate list items */
+    margin: 0 1em; /* Add margin to separate list items (using em) */
 }
 
 nav a {
     text-decoration: none; /* Remove underlines from links */
     color: #fff; /* Text color for links */
     font-weight: bold; /* Bold text for links */
-    padding: 10px 20px; /* Padding around links */
+    padding: 0.5em 1em; /* Padding around links (using em) */
     border-radius: 5px; /* Rounded corners for links */
-    font-size: 18px; /* Increase font size */
+    font-size: 1.8em; /* Slightly larger font size (adjust as needed) */
 }
 
 /* Menu Hover Effect */
