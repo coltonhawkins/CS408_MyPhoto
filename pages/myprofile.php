@@ -13,7 +13,7 @@
         <h2>My Profile</h2>
         <div class="profile-info">
             <div class="profile-picture">
-                <img src="images/profile.jpg" alt="Profile Picture" width="150" height="150">
+                <img src="../images/profile.jpg" alt="Profile Picture" width="150" height="150">
             </div>
             <div class="profile-details">
                 <h3>John Doe</h3>
