@@ -17,7 +17,7 @@
             <li><a href="../pages/myprofile.php">My Profile</a></li>
             <li><a href="../pages/about.php">About</a></li>
             <li><a href="../pages/404.php">Login</a></li>
-            <li><a href="../pages/404.php">SignUp</a></li>
+            <li><a href="../pages/404.php">Sign Up</a></li>
         </ul>
     </nav>
 </body>

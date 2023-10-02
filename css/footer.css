@@ -3,20 +3,16 @@ footer {
     background-color: #333; /* Background color for the footer */
     color: #fff; /* Text color for the footer */
     text-align: center; /* Center-align the content */
-    padding: 20px 0; /* Padding around the footer content */
-    position: absolute; /* Position the footer at the bottom of the page */
-    bottom: 0; /* Stick the footer to the bottom of the viewport */
+    padding: 10px 0; /* Padding around the footer content */
+    position: absolute; /* Position the footer absolutely */
+    bottom: 0; /* Position the footer at the bottom of the page */
     width: 100%; /* Full width footer */
     font-size: 14px; /* Font size for footer text */
+    margin-top: 50px; /* Add a margin-top to the footer to prevent it from covering other content */
 }
 
-/* Additional styling for footer links, if any */
-footer a {
-    color: #fff; /* Text color for links within the footer */
-    text-decoration: none; /* Remove underlines from links */
+/* Add margin to the bottom of the body */
+body {
+    margin-bottom: 50px; /* Set a bottom margin to the body to prevent the footer from covering other content */
 }
 
-/* Hover effect for footer links, if any */
-footer a:hover {
-    text-decoration: underline; /* Underline links on hover, if desired */
-}
