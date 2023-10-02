@@ -1,0 +1,21 @@
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Change the font family as needed */
+    background-color: #f5f5f5; /* Background color for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.6; /* Line height for text */
+    color: #333; /* Text color for the body */
+}
+
+/* Center the page content */
+body h1,
+#welcome-section,
+#featured-photos,
+#testimonials {
+    text-align: center;
+    margin: 20px auto; /* Center the content horizontally */
+    max-width: 800px; /* Adjust the maximum content width as needed */
+}
+
+/* Add additional styles for specific elements within the body as needed */
