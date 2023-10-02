@@ -1,4 +1,4 @@
 <?php 
-    require_once("pages/home.php"); 
+    require("pages/home.php"); 
 
 ?>

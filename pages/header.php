@@ -1,6 +1,5 @@
 <header>
     <img src="../images/logo.PNG" alt="logo" width="100" height="100">
-    <h1>My Foto - Home</h1>
 </header>
 <nav>
     <ul>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>My Profile - My Foto</title>
 </head>
+<h1>My Foto - MyProfile</h1>
 <body>
     <?php include 'header.php'; ?>
 
