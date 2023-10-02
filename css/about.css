@@ -1,4 +1,3 @@
-
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
@@ -45,11 +44,13 @@ h1, h2, h3 {
 #about-section p {
     font-size: 16px;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 #about-section ul {
     list-style-type: disc;
     margin-left: 20px;
+    margin-bottom: 15px;
 }
 
 #about-section li {
@@ -57,13 +58,41 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-
 /* Links styles */
 a {
     color: #3498db;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #1abc9c;
+}
+/* Additional styles for prettiness */
+.container {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#about-section {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#about-section h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#about-section ul {
+    list-style-type: circle;
+}
+
+a {
+    font-weight: bold;
 }
