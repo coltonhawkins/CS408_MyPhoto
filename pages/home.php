@@ -25,9 +25,6 @@
         <!-- Add user testimonials here -->
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 My Foto</p>
-    </footer>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
