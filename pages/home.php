@@ -13,17 +13,12 @@
     <section id="welcome-section">
         <h2>Create, Share, Inspire</h2>
         <p>At My Foto, we believe that every picture tells a story. Capture your favorite moments and share them with the world.</p>
-        <a href="feed.php" class="cta-button">Explore the Feed</a>
+        <a href="../pages/feed.php" class="cta-button">Explore the Feed</a>
     </section>
 
     <section id="featured-photos">
         <h2>Featured Photos</h2>
         <!-- Add a grid of featured photos here -->
-    </section>
-
-    <section id="testimonials">
-        <h2>What Our Users Say</h2>
-        <!-- Add user testimonials here -->
     </section>
 
     <?php include 'footer.php'; ?>
