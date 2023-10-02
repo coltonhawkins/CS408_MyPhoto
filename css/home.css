@@ -12,11 +12,21 @@ body {
 /* Center the page content */
 body h1,
 #welcome-section,
-#featured-photos,
-#testimonials {
+#featured-photos
+{
     text-align: center;
     margin: 20px auto; /* Center the content horizontally */
     max-width: 800px; /* Adjust the maximum content width as needed */
+}
+
+h2 {
+    font-size: 2em; /* Increase the font size */
+    color: #333; /* Text color for h2 tags */
+    background-color: #ff6600; /* Background color for h2 tags */
+    padding: 10px; /* Padding around h2 tags */
+    border-radius: 5px; /* Rounded corners for h2 tags */
+    text-align: center; /* Center-align h2 text */
+    margin-top: 20px; /* Add margin at the top of h2 tags */
 }
 
 /* Add additional styles for specific elements within the body as needed */
