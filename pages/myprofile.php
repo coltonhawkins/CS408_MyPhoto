@@ -20,9 +20,9 @@
                 <img src="../images/profile.PNG" alt="Profile Picture" width="150" height="150">
             </div>
             <div class="profile-details">
-                <h3>John Doe</h3>
-                <p>Email: john.doe@example.com</p>
-                <p>Location: BOISE, ID, USA</p>
+                <h3>Colton Hawkins</h3>
+                <p>Email: coltonhawkins@u.boisestate.edu</p>
+                <p>Location: Boise, ID, USA</p>
             </div>
         </div>
 
