@@ -1,13 +1,5 @@
 /* Body Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    font-size: 1.4em; /* Increase font size for body text */
-}
+
 
 /* Center the page content */
 body h1,
