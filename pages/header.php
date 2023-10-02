@@ -1,7 +1,7 @@
 <header>
     <img src="../images/logo.PNG" alt="logo" width="100" height="100">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
-    <link rel="icon" type="image/x-icon" href="../favicon/logo.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon/logo.icon">
 
 </header>
 <nav>
