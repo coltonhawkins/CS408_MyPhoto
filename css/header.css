@@ -3,12 +3,14 @@ header {
     background-color: #333; /* Background color for the header */
     color: #fff; /* Text color for the header */
     padding: 10px; /* Padding around the header content */
-    text-align: center; /* Center-align the content */
+    display: flex; /* Use flexbox to align elements */
+    align-items: center; /* Vertically align elements */
+    justify-content: flex-start; /* Align elements to the left */
 }
 
 header img {
     margin-right: 10px; /* Margin for the logo image */
-    vertical-align: middle; /* Align the logo vertically with the text */
+    height: 100px; /* Adjust the height of the logo */
 }
 
 /* Navigation Styles */
@@ -32,8 +34,9 @@ nav a {
     text-decoration: none; /* Remove underlines from links */
     color: #fff; /* Text color for links */
     font-weight: bold; /* Bold text for links */
-    padding: 5px 10px; /* Padding around links */
+    padding: 10px 20px; /* Padding around links */
     border-radius: 5px; /* Rounded corners for links */
+    font-size: 18px; /* Increase font size */
 }
 
 /* Menu Hover Effect */

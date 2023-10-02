@@ -1,6 +1,6 @@
 <header>
     <img src="../images/logo.PNG" alt="logo" width="100" height="100">
-    <link rel="stylesheet" type="text/css" href="../css/headerfooter.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
 
 </header>
 <nav>
