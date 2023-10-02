@@ -4,7 +4,6 @@ footer {
     text-align: center; /* Center-align the content */
     padding: 20px 0; /* Padding around the footer content */
     font-size: 14px; /* Font size for footer text */
-    position: absolute; /* Position the footer fixed to the bottom */
     left: 0; /* Position from the left edge */
     bottom: 0; /* Position from the bottom edge */
     width: 100%; /* Full width footer */
