@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <h1>My Foto - Home</h1>
 
     <section id="welcome-section">
         <h2>Create, Share, Inspire</h2>

@@ -6,9 +6,10 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>My Profile - My Foto</title>
 </head>
-<h1>My Foto - MyProfile</h1>
+
 <body>
     <?php include 'header.php'; ?>
+    <h1>My Foto - MyProfile</h1>
 
     <section id="profile-section">
         <h2>My Profile</h2>

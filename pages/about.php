@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <h1>My Foto - About Us</h1>
 
     <section id="about-section">
         <h2>About My Foto</h2>

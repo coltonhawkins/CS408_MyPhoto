@@ -6,9 +6,10 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Photo Feed - My Foto</title>
 </head>
-<h1>My Foto - Feed</h1>
+
 <body>
     <?php include 'header.php'; ?>
+    <h1>My Foto - Feed</h1>
 
     <section id="feed-section">
         <h2>Photo Feed</h2>

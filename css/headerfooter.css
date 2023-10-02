@@ -1,51 +1,42 @@
 /* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #333; /* Background color for the header */
+    color: #fff; /* Text color for the header */
+    padding: 10px; /* Padding around the header content */
+    text-align: center; /* Center-align the content */
 }
 
 header img {
-    margin-right: 10px;
+    margin-right: 10px; /* Margin for the logo image */
+    vertical-align: middle; /* Align the logo vertically with the text */
 }
 
-header h1 {
-    font-size: 24px;
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
+/* Navigation Styles */
+nav {
+    background-color: #444; /* Background color for the navigation bar */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove list bullets */
     margin: 0;
     padding: 0;
+    text-align: center; /* Center-align the list items */
 }
 
 nav li {
     display: inline-block;
-    margin-right: 20px;
+    margin: 0 10px; /* Add margin to separate list items */
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for links */
+    font-weight: bold; /* Bold text for links */
+    padding: 5px 10px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners for links */
 }
 
 /* Menu Hover Effect */
 nav a:hover {
-    border-bottom: 2px solid #fff;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    background-color: #555; /* Background color on hover */
 }
