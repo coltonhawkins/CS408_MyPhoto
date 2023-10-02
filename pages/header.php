@@ -13,10 +13,10 @@
     </header>
     <nav>
         <ul>
-            <li><a href="pages/index.php">Home</a></li>
-            <li><a href="pages/feed.php">Feed</a></li>
-            <li><a href="pages/myprofile.php">My Profile</a></li>
-            <li><a href="pages/about.php">About</a></li>
+            <li><a href="../pages/home.php">Home</a></li>
+            <li><a href="../pages/feed.php">Feed</a></li>
+            <li><a href="../pages/myprofile.php">My Profile</a></li>
+            <li><a href="../pages/about.php">About</a></li>
         </ul>
     </nav>
 </body>
