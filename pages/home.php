@@ -7,7 +7,7 @@
     <title>Welcome to My Foto</title>
 </head>
 <body>
-    <?php include '../header.php'; ?>
+    <?php include 'header.php'; ?>
 
     <section id="welcome-section">
         <h2>Create, Share, Inspire</h2>
