@@ -72,3 +72,7 @@ header h1 {
 a {
     font-weight: bold;
 }
+
+.footer{
+    bottom: 0; /* Position the footer at the bottom of the content */
+}

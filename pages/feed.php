@@ -20,6 +20,8 @@
         <p>Explore the latest photos shared by our talented photographers. Click on each photo to view it in full size and learn more about the photographers and their work.</p>
     </section>
 
-    <?php include 'footer.php'; ?>
+    <div id="footer">
+        <?php include 'footer.php'; ?>
+    </div>
 </body>
 </html>

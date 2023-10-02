@@ -49,3 +49,6 @@ h1, h2, h3 {
     padding: 10px;
 }
 
+.footer{
+    bottom: 0; /* Position the footer at the bottom of the content */
+}

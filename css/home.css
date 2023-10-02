@@ -47,3 +47,7 @@ h2 {
     background-color: #3498db; /* Background color on hover (slightly darker) */
     transition: background-color 0.3s; /* Smooth color transition on hover */
 }
+
+.footer{
+    bottom: 0; /* Position the footer at the bottom of the content */
+}

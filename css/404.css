@@ -19,3 +19,6 @@
     margin-bottom: 10px;
 }
 
+.footer{
+    bottom: 0; /* Position the footer at the bottom of the content */
+}

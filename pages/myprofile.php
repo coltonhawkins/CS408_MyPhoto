@@ -41,6 +41,8 @@
         </div>
     </section>
 
-    <?php include 'footer.php'; ?>
+    <div id="footer">
+        <?php include 'footer.php'; ?>
+    </div>
 </body>
 </html>
