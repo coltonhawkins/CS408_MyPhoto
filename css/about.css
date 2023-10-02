@@ -59,16 +59,7 @@ h1, h2, h3 {
 }
 
 /* Links styles */
-a {
-    color: #3498db;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-}
 
-a:hover {
-    text-decoration: underline;
-    color: #1abc9c;
-}
 /* Additional styles for prettiness */
 .container {
     border-radius: 5px;

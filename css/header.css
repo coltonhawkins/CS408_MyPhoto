@@ -33,11 +33,12 @@ nav li {
 
 nav a {
     text-decoration: none; /* Remove underlines from links */
-    color: #fff; /* Text color for links */
+    color: #ff6600; /* Text color for links */
     font-weight: bold; /* Bold text for links */
     padding: 0.5em 1em; /* Padding around links (using em) */
     border-radius: 5px; /* Rounded corners for links */
     font-size: 1.8em; /* Font size for menu text (adjust as needed) */
+    transition: all 0.3s ease-in-out;
 }
 
 /* Menu Hover Effect */
