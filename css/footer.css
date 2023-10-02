@@ -11,8 +11,5 @@ footer {
     margin-top: 50px; /* Add a margin-top to the footer to prevent it from covering other content */
 }
 
-/* Add margin to the bottom of the body */
-body {
-    margin-bottom: 50px; /* Set a bottom margin to the body to prevent the footer from covering other content */
-}
+
 
