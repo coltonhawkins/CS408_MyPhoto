@@ -7,6 +7,18 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
+    <?php
+        private $host = "us-cdbr-east-06.cleardb.net";
+        private $db = "heroku_0bed022811aae1b";
+        private $user = "bd816edec88467";
+        private $pass = "104bcd5f";
+
+        public function getConnection() {
+            $conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        }
+    ?>
     <header>
         <img src="../images/logo.PNG" alt="logo" width="100" height="100">
     </header>
