@@ -9,7 +9,7 @@
     <title>Welcome to My Foto</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <?php require 'header.php'; ?>
     <h1>My Foto - Home</h1>
 
     <section id="welcome-section">
