@@ -7,6 +7,16 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
+    <?php require_once('Doo.php'); 
+    
+        // Create a new Database object
+        $db = new Database();
+
+        // Get a database connection
+        $connection = $db->getConnection();
+    
+    
+    ?>
    
     <header>
         <img src="../images/logo.PNG" alt="logo" width="100" height="100">
