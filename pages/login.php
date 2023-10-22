@@ -16,18 +16,13 @@
     <h1>My Foto - Login</h1>
 
     <div id="box">
+        <form method="post">
+            <input id="text" type="text" name="username" placeholder="Username" required>
+            <input id="text" type="password" name="password" placeholder="Password" required>
 
-    <form method="post">
-        
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-
-        <input type="submit" name="login" value="Login">
-        <a href="../pages/signup.php">Sign Up</a>
-
-    </form>
-
-
+            <input id="button" type="submit" name="login" value="Login">
+            <a href="../pages/signup.php">Sign Up</a>
+        </form>
     </div>
 
     <?php include 'footer.php'; ?>
