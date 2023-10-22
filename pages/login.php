@@ -1,3 +1,8 @@
+<?php
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +13,23 @@
 </head>
 <?php include 'header.php'; ?>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <h1>My Foto - Login</h1>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+    <div id="box">
 
-            <button type="submit">Login</button>
-        </form>
+    <form method="post">
+        
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <input type="submit" name="login" value="Login">
+        <a href="../pages/signup.php">Sign Up</a>
+
+    </form>
+
+
     </div>
+
     <?php include 'footer.php'; ?>
 </body>
 </html>

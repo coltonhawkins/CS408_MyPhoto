@@ -1,3 +1,10 @@
+<?php
+    // Start the session
+    session_start();
+
+    $_SESSION;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +15,12 @@
 </head>
 <body>
     <?php require_once('Doo.php'); 
-    
         // Create a new Database object
         $db = new Database();
-
         // Get a database connection
         $connection = $db->getConnection();
-    
-    
     ?>
+   
    
     <header>
         <img src="../images/logo.PNG" alt="logo" width="100" height="100">
@@ -29,6 +33,7 @@
             <li><a href="../pages/about.php">About</a></li>
             <li><a href="../pages/login.php">Login</a></li>
             <li><a href="../pages/404.php">Sign Up</a></li>
+            <li><a href="../pages/logout.php">Log Out</a></li>
         </ul>
     </nav>
 </body>

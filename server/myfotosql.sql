@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS images (
     user_id INT NOT NULL,
     image_path VARCHAR(255) NOT NULL,
     upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 -- Create the 'image_likes' table to store likes for images
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS image_likes (
     user_id INT NOT NULL,
     image_id INT NOT NULL,
     like_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (image_id) REFERENCES images(image_id)
 );
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS comments (
     image_id INT NOT NULL,
     comment_text TEXT,
     comment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (image_id) REFERENCES images(image_id)
 );
 
