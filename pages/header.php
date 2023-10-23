@@ -33,7 +33,7 @@
             <li><a href="../pages/about.php">About</a></li>
             <li><a href="../pages/login.php">Login</a></li>
             <li><a href="../pages/404.php">Sign Up</a></li>
-            <li><a href="../pages/logout.php">Log Out</a></li>
+            <li><a href="../pages/404.php">Log Out</a></li>
         </ul>
     </nav>
 </body>
