@@ -2,10 +2,12 @@
 
 session_start();
     include("Doo.php");
+    // Create a new Database object
+    $db = new Database();
+    // Get a database connection
+    $connection = $db->getConnection();
     include("functions.php");
 
-    $database = new Database();
-    $connection = $database->getConnection();
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         
