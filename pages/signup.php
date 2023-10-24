@@ -4,6 +4,9 @@ session_start();
     include("Doo.php");
     include("functions.php");
 
+    $database = new Database();
+    $connection = $database->getConnection();
+
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         
         $username = $_POST['username'];

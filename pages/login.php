@@ -1,5 +1,8 @@
 <?php
-
+ include("Doo.php");
+ include("functions.php");
+ $database = new Database();
+ $connection = $database->getConnection();
 
 
 ?>
