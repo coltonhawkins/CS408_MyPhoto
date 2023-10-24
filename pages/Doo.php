@@ -4,10 +4,19 @@
             private $db = "heroku_0bed022811aae1b";
             private $user = "bd816edec88467";
             private $pass = "104bcd5f";
+
+            if(!$con = mysqli_connect($host,$user,$pass,$db))
+            {
+                die("failed to connect!");
+            }
+            else
+            {
+                echo "connected";
+            }
         
             public function getConnection() {
-                $conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $con = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
+                $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $conn;
             }
         }
