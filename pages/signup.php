@@ -2,7 +2,7 @@
 
 session_start();
     include("Doo.php");
-    include("function.php");
+    include("functions.php");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         
