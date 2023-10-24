@@ -7,7 +7,7 @@
 
             if(!$con = mysqli_connect($host,$user,$pass,$db))
             {
-                die("failed to connect!");
+                echo("failed to connect!");
             }
             else
             {
@@ -17,7 +17,7 @@
             public function getConnection() {
                 $con = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                return $conn;
+                return $con;
             }
         }
     ?>

@@ -1,8 +1,13 @@
 <?php
     // Start the session
     session_start();
-
     $_SESSION;
+    
+    require_once('Doo.php'); 
+    // Create a new Database object
+    $db = new Database();
+    // Get a database connection
+    $connection = $db->getConnection();
 
 ?>
 <!DOCTYPE html>
@@ -14,12 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
-    <!-- <?php// require_once('Doo.php'); 
-        // Create a new Database object
-       // $db = new Database();
-        // Get a database connection
-       // $connection = $db->getConnection();
-    ?> -->
+   
    
    
     <header>
