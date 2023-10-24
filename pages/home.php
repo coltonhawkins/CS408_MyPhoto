@@ -1,12 +1,6 @@
 <?php
 session_start();
 $_SESSION;
-
-require_once("../pages/Doo.php");
-// Create a new Database object
-$db = new Database();
-// Get a database connection
-$connection = $db->getConnection();
 include("../pages/functions.php");
 
 $user_data = check_login($con);

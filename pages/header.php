@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-        require_once('Doo.php'); 
+        require_once('pages/Doo.php'); 
         // Create a new Database object
         $db = new Database();
         // Get a database connection
