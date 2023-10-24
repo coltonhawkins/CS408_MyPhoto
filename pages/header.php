@@ -7,15 +7,13 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
-    <?php 
-        require_once('Doo.php'); 
-        include('functions.php');
-        // Create a new Database object
-        $db = new Database();
-        // Get a database connection
-        $connection = $db->getConnection();
-        $user_data = check_login($con);
-    ?>
+    <!-- <?php 
+        // require_once('Doo.php'); 
+        // // Create a new Database object
+        // $db = new Database();
+        // // Get a database connection
+        // $connection = $db->getConnection();
+    ?> -->
    
    
     <header>
