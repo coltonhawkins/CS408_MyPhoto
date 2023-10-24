@@ -4,7 +4,26 @@ session_start();
     include("Doo.php");
     include("function.php");
 
-    
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        
+        $username = $_POST['username'];
+        $password_hash = $_POST['password_hash'];
+
+        if(!empty($username) && !empty($password_hash) && !is_numeric($username)){
+
+            //save to database
+            $user_id = random_num(20);
+            $query = "insert into users (user_id, username, password_hash) values ('$user_id', '$username', '$password_hash')";
+
+            mysqli_query($con, $query);
+
+            header("Location: login.php");
+            die;
+   
+        }else{
+            echo "Please enter some valid information!";
+        }
+    }
 
 
 ?>

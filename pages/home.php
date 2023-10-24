@@ -1,4 +1,8 @@
 <?php
+session_start();
+include("Doo.php");
+include("function.php");
+
 
 ?>
 
