@@ -43,50 +43,50 @@ session_start();
 
     <style>
         /* Style the form container */
-    form {
-        width: 300px;
-        margin: 0 auto;
-    }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
 
-    /* Style the form elements */
-    div {
-        margin: 10px 0;
-    }
+        /* Style the form elements */
+        div {
+            margin: 10px 0;
+        }
 
-    label {
-        display: block; /* Place labels on a new line */
-        font-weight: bold;
-    }
+        label {
+            display: block; /* Place labels on a new line */
+            font-weight: bold;
+        }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="password"]:focus {
-        border-color: #007BFF; /* Change border color on focus */
-    }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF; /* Change border color on focus */
+        }
 
-    button {
-        background-color: #007BFF;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        cursor: pointer;
-}
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #0056b3; /* Darker color on hover */
-}
+        button:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
 
     </style>
 

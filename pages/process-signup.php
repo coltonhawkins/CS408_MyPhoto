@@ -26,7 +26,7 @@ if( ! preg_match("/[0-9]/", $_POST["password"])) {
 }
 
 //password confirmation
-if($_POST["password"] != $_POST["confirm_password"]) {
+if(!$_POST["password"] != $_POST["confirm_password"]) {
     die("Passwords do not match");
 }
 
