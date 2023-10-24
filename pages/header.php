@@ -14,12 +14,12 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
-    <?php require_once('Doo.php'); 
+    <!-- <?php// require_once('Doo.php'); 
         // Create a new Database object
-        $db = new Database();
+       // $db = new Database();
         // Get a database connection
-        $connection = $db->getConnection();
-    ?>
+       // $connection = $db->getConnection();
+    ?> -->
    
    
     <header>
