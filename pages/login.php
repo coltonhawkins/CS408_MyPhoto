@@ -7,58 +7,57 @@
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
     <title>Login Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <?php include 'header.php'; ?>
 <body>
     <h1>My Foto - Login</h1>
 
     <style>
+        /* CSS styling for the login form container */
         #box {
             width: 300px;
             margin: 0 auto;
+            background-color: #f4f4f4;
             padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
             border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
 
-        form {
-            text-align: center;
-        }
-
+        /* Style the form elements */
         input[type="text"],
         input[type="password"] {
             width: 100%;
-            padding: 5px 5px, 5px, 5px;
-            margin: 10px 0;
+            padding: 10px;
+            margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF; /* Change border color on focus */
         }
 
         input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            padding: 10px 20px;
+            font-size: 18px;
             cursor: pointer;
         }
 
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
         a {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
             text-decoration: none;
-            color: #007bff;
+            color: #007BFF;
+            display: block;
+            margin-top: 10px;
         }
 
         a:hover {
-            color: #0056b3;
+            text-decoration: underline;
         }
     </style>
 
