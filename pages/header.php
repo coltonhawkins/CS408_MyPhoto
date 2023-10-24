@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        require_once("../pages/Doo.php");
+        require_once("Doo.php");
     ?>
     <!-- <?php 
         // require_once('Doo.php'); 
