@@ -16,7 +16,7 @@ session_start();
             $query = "insert into users (user_id, username, password_hash) values ('$user_id', '$username', '$password_hash')";
 
             //saving to database
-            mysqli_query($query);
+            mysqli_query($con, $query);
 
             header("Location: ../pages/login.php");
             die;
