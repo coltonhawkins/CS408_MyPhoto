@@ -2,7 +2,7 @@
 session_start();
 $_SESSION;
 
-include("Doo.php");
+require_once("../pages/Doo.php");
 include("functions.php");
 $database = new Database();
 $connection = $database->getConnection();

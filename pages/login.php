@@ -1,10 +1,7 @@
 <?php
- include("Doo.php");
- include("functions.php");
- $database = new Database();
- $connection = $database->getConnection();
-
-
+ require_once("../pages/Doo.php");
+ include("../pages/functions.php");
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">

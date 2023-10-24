@@ -1,9 +1,7 @@
 <?php
 session_start();
-include("Doo.php");
-include("functions.php");
-$database = new Database();
-$connection = $database->getConnection();
+require_once("../pages/Doo.php");
+include("../pages/functions.php");
 
 $user_data = check_login($con);
 
