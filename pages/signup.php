@@ -26,9 +26,8 @@ session_start();
             echo "Please enter some valid information!";
         }
     }
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
