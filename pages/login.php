@@ -13,53 +13,52 @@
     <h1>My Foto - Login</h1>
 
     <style>
-        /* CSS styling for the login form container */
-        #box {
-            width: 300px;
-            margin: 0 auto;
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
+        /* Style the form container */
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
 
-        /* Style the form elements */
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    /* Style the form elements */
+    div {
+        margin: 10px 0;
+    }
 
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-color: #007BFF; /* Change border color on focus */
-        }
+    label {
+        display: block; /* Place labels on a new line */
+        font-weight: bold;
+    }
 
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-        }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
 
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            display: block;
-            margin-top: 10px;
-        }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        border-color: #007BFF; /* Change border color on focus */
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    
+    button {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
     </style>
 
     <div id="box">
