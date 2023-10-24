@@ -34,13 +34,61 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
 </head>
 <?php include 'header.php'; ?>
 <body>
     <h1>My Foto - SignUp</h1>
+
+    <style>
+        /* Style the form container */
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Style the form elements */
+    div {
+        margin: 10px 0;
+    }
+
+    label {
+        display: block; /* Place labels on a new line */
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        border-color: #007BFF; /* Change border color on focus */
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+    </style>
 
     <form>
     
@@ -50,7 +98,7 @@ session_start();
         </div>
 
         <div>
-            <label for="email">email</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email">
         </div>
 
