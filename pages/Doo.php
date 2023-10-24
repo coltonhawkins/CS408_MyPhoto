@@ -5,14 +5,7 @@
             private $user = "bd816edec88467";
             private $pass = "104bcd5f";
 
-            if(!$con = mysqli_connect($host,$user,$pass,$db))
-            {
-                echo("failed to connect!");
-            }
-            else
-            {
-                echo "connected";
-            }
+           
         
             public function getConnection() {
                 $con = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
