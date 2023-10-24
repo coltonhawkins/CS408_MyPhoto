@@ -8,9 +8,9 @@
            
         
             public function getConnection() {
-                $con = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
-                $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                return $con;
+                $conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                return $conn;
             }
         }
     ?>
