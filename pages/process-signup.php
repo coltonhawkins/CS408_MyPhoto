@@ -1,7 +1,7 @@
 <?php
 
 //validating name
-if(empty($_POST["name"]])) {
+if(empty($_POST["name"])) {
     die("Please enter your name");
 }
 
