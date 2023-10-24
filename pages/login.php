@@ -69,7 +69,7 @@
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" name="login" value="Login">
-            <a href="../pages/404.php">Sign Up</a>
+            <a href="../pages/signup.php">Click to Sign Up</a>
         </form>
     </div>
 
