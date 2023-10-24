@@ -90,7 +90,7 @@ button:hover {
 
     </style>
 
-    <form>
+    <form action="process-signup.php" method="post">
     
         <div>
             <label for="name">Name</label>
