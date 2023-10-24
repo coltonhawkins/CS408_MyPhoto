@@ -90,7 +90,7 @@ session_start();
 
     </style>
 
-    <form action="process-signup.php" method="post">
+    <form action="process-signup.php" method="post" novalidate>
     
         <div>
             <label for="name">Name</label>

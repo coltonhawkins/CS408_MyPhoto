@@ -30,7 +30,7 @@ if(!$_POST["password"] != $_POST["confirm_password"]) {
     die("Passwords do not match");
 }
 
-$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT)
+$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 
 print_r($_POST);
