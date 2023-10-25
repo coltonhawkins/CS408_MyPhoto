@@ -20,19 +20,19 @@ if( ! preg_match("/[a-z]/i/", $_POST["password"])) {
     die("Password must contain at least one letter");
 }
 
-// //checking if password contains a number
-// if( ! preg_match("/[0-9]/", $_POST["password"])) {
-//     die("Password must contain at least one number");
-// }
+//checking if password contains a number
+if( ! preg_match("/[0-9]/", $_POST["password"])) {
+    die("Password must contain at least one number");
+}
 
-// password confirmation
-// if(!$_POST["password"] != $_POST["confirm_password"]) {
-//     die("Passwords do not match");
-// }
+//password confirmation
+if($_POST["password"] !== $_POST["password_confirmation"]) {
+    die("Passwords do not match");
+}
 
-// //hashing the password
-// $password_hash = password_hash($_POST["confirm_password"], PASSWORD_DEFAULT);
+//hashing the password
+$password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT);
 
 
 print_r($_POST);
-// var_dump($password_hash);
+var_dump($password_hash);
