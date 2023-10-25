@@ -33,6 +33,7 @@ if($_POST["password"] !== $_POST["password_confirmation"]) {
 //hashing the password
 $password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT);
 
+$mysqli = require __DIR__ . "/../pages/Doo.php";
 
 print_r($_POST);
 var_dump($password_hash);
