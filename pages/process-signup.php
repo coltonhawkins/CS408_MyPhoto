@@ -35,6 +35,12 @@ $password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT
 
 $mysqli = require __DIR__ . "/Doo.php";
 
+
+// Check if the connection was successful
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
 $sql = "INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
