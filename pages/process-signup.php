@@ -15,10 +15,10 @@ if(strlen($_POST["password"]) < 8) {
     die("Password must be at least 8 characters long");
 }
 
-// //checking if password contains a letter
-// if( ! preg_match("/[a-z]/i/", $_POST["password"])) {
-//     die("Password must contain at least one letter");
-// }
+//checking if password contains a letter
+if( ! preg_match("/[a-z]/i/", $_POST["password"])) {
+    die("Password must contain at least one letter");
+}
 
 // //checking if password contains a number
 // if( ! preg_match("/[0-9]/", $_POST["password"])) {
