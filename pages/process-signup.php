@@ -38,7 +38,7 @@ $mysqli = require __DIR__ . "/Doo.php";
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES (?, ?, ?)";
         
-// $stmt = $mysqli->stmt_init();
+$stmt = $mysqli->stmt_init();
 
 // if ( ! $stmt->prepare($sql)) {
 //     die("SQL error: " . $mysqli->error);
