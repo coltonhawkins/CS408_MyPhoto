@@ -33,7 +33,7 @@ if($_POST["password"] !== $_POST["password_confirmation"]) {
 //hashing the password
 $password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "/Doo.php";
+$mysqli = require __DIR__ . "../pages/Doo.php";
 
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES (?, ?, ?)";
