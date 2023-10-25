@@ -38,20 +38,13 @@ $mysqli = require_once __DIR__ . "/Doo.php";
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES (?, ?, ?)";
         
-//$stmt = $mysqli->stmt_init();
-
 $stmt = $mysqli->prepare($sql);
 
-// if ( ! $stmt->prepare($sql)) {
-//     die("SQL error: " . $mysqli->error);
-// }
+$stmt->bind_param("sss", $_POST["name"], $_POST["email"], $password_hash);
 
-// $stmt->bind_param("sss",
-//                   $_POST["name"],
-//                   $_POST["email"],
-//                   $password_hash);
+$stmt->execute();
 
-echo "User created successfully";
+
 
 print_r($_POST);
 var_dump($password_hash);
