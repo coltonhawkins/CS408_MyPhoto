@@ -7,7 +7,7 @@
 
             
 
-            $mqsqli = new mysqli($host, $user, $pass, $db);
+            $mysqli = new mysqli($host, $user, $pass, $db);
            
             if($mysqli->connect_errno) {
                 die("Connection failed: " . $mysqli->connect_error);
