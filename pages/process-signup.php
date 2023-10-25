@@ -33,18 +33,23 @@ if($_POST["password"] !== $_POST["password_confirmation"]) {
 //hashing the password
 $password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT);
 
-$mysqli = require_once __DIR__ . "/Doo.php";
+$mysqli = require __DIR__ . "/database.php";
 
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES (?, ?, ?)";
         
-$stmt = $mysqli->prepare($sql);
+$stmt = $mysqli->stmt_init();
 
-$stmt->bind_param("sss", $_POST["name"], $_POST["email"], $password_hash);
+if ( ! $stmt->prepare($sql)) {
+    die("SQL error: " . $mysqli->error);
+}
 
-$stmt->execute();
+$stmt->bind_param("sss",
+                  $_POST["name"],
+                  $_POST["email"],
+                  $password_hash);
 
-
+echo "User created successfully";
 
 print_r($_POST);
 var_dump($password_hash);
