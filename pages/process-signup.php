@@ -49,6 +49,7 @@ $stmt->bind_param("sss",
                   $_POST["email"],
                   $password_hash);
 
+$stmt->execute();
 echo "User created successfully";
 
 print_r($_POST);
