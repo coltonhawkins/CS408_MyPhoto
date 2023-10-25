@@ -35,5 +35,13 @@ $password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT
 
 $mysqli = require __DIR__ . "/../pages/Doo.php";
 
+$sql = "INSERT INTO user (username, email, password_hash) VALUES (?, ?, ?)";
+
+$stmt = $mysqli->stmt_init();
+
+if( ! $stmt->prepare($sql)){
+    die("SQL error: " . $mysqli->error);
+}
+
 print_r($_POST);
 var_dump($password_hash);
