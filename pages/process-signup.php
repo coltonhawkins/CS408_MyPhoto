@@ -43,5 +43,11 @@ if( ! $stmt->prepare($sql)){
     die("SQL error: " . $mysqli->error);
 }
 
+$stmt->bind_param("sss", $_POST["name"], $_POST["email"], $password_hash);
+
+$stmt->execute();
+
+echo "User created successfully";
+
 print_r($_POST);
 var_dump($password_hash);
