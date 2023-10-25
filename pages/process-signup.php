@@ -40,7 +40,7 @@ $sql = "INSERT INTO user (name, email, password_hash)
         
 //$stmt = $mysqli->stmt_init();
 
-$stmt->prepare($sql)
+$stmt->prepare($sql);
 
 // if ( ! $stmt->prepare($sql)) {
 //     die("SQL error: " . $mysqli->error);
