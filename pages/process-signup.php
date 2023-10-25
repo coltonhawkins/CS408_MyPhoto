@@ -41,13 +41,13 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-$sql = "INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)";
+$sql = "INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
 
-// if( ! $stmt->prepare($sql)){
-//     die("SQL error: " . $mysqli->error);
-// }
+if( ! $stmt->prepare($sql)){
+    die("SQL error: " . $mysqli->error);
+}
 
 // $stmt->bind_param("sss", $_POST["name"], $_POST["email"], $password_hash);
 
