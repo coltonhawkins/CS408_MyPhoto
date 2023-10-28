@@ -1,4 +1,18 @@
+<?php
 
+    session_start();
+
+    if(isset($_SESSION["user_id"])) {
+        $mysqli = require __DIR__ . "/Doo.php";
+    
+        $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
+        
+        $result = $mysqli->query($sql);
+        
+        $user = $result->fetch_assoc();
+    } 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +35,10 @@
                 <img src="../images/profile.PNG" alt="Profile Picture" width="150" height="150">
             </div>
             <div class="profile-details">
-                <h3>Colton Hawkins</h3>
-                <p>Email: coltonhawkins@u.boisestate.edu</p>
-                <p>Location: Boise, ID, USA</p>
+            <?php if (isset($user)): ?>
+                <h3><?= htmlspecialchars($user["name"]) ?></h3>
+                <p>Email: <?= htmlspecialchars($user["email"]) ?></p>
+                <p>Member Since: <?= htmlspecialchars($user["created_date"]) ?></p>
             </div>
         </div>
 
