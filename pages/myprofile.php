@@ -86,7 +86,7 @@
         <h3>My Photos</h3>
         <!-- Upload Button -->
         <div class="upload-button">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
                 <label for="name">Title:</label>
                 <input type="text" name="name" id="name" placeholder="Title" required><br>
 
