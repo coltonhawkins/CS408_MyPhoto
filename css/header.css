@@ -53,13 +53,3 @@ nav .user-greeting:hover {
     transition: background-color 0.3s, border-color 0.3s; /* Add the same transition on hover */
 }
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li, .user-greeting {
-        margin: 10px 0;
-    }
-}
