@@ -1,55 +1,47 @@
-/* Reset some default styles */
-body, ul {
-    margin: 0;
-    padding: 0;
-}
-
 /* Header Styles */
 header {
-    background-color: #333; /* Set your desired background color */
-    text-align: center;
-    padding: 10px 0; /* Adjust padding as needed */
+    background-color: #333; /* Background color for the header */
+    color: #fff; /* Text color for the header */
+    padding: 1em; /* Padding around the header content (using em) */
+    display: flex; /* Use flexbox to align elements */
+    align-items: center; /* Vertically align elements */
+    justify-content: flex-start; /* Align elements to the left */
 }
 
-/* Style the logo */
 header img {
-    max-width: 100px; /* Set your desired logo size */
-    max-height: 100px;
-    margin: 0 auto;
-    display: block;
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Allow the image height to adjust proportionally */
+    margin-right: 1em; /* Margin for the logo image (using em) */
 }
 
 /* Navigation Styles */
 nav {
-    background-color: #333; /* Set your desired background color */
-    text-align: center;
-    padding: 10px 0; /* Adjust padding as needed */
+    background-color: #444; /* Background color for the navigation bar */
 }
 
 nav ul {
-    list-style: none;
-    display: flex; /* Use flexbox to horizontally align items */
-    justify-content: center; /* Horizontally center-align items */
+    list-style-type: none; /* Remove list bullets */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align the list items */
 }
 
 nav li {
-    margin: 0 15px; /* Adjust the spacing between menu items as needed */
+    display: inline-block;
+    margin: 0 1em; /* Add margin to separate list items (using em) */
 }
 
-nav a, .user-greeting {
-    text-decoration: none;
-    color: #fff; /* Set your desired text color */
-    font-weight: bold;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border: 1px solid transparent; /* Add a border for consistency */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    transition: background-color 0.3s, border-color 0.3s; /* Add a smooth transition effect */
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fafafa; /* Text color for links */
+    font-weight: bold; /* Bold text for links */
+    padding: 0.5em 1em; /* Padding around links (using em) */
+    border-radius: 5px; /* Rounded corners for links */
+    font-size: 1.8em; /* Font size for menu text (adjust as needed) */
+    transition: all 0.3s ease-in-out;
 }
 
-/* Style the user greeting on hover */
-nav .user-greeting:hover {
-    background-color: #555; /* Set a background color on hover */
-    border-color: #fff; /* Set a border color on hover */
-    transition: background-color 0.3s, border-color 0.3s; /* Add the same transition on hover */
+/* Menu Hover Effect */
+nav a:hover {
+    background-color: #3498db; /* Background color on hover */
 }
-
