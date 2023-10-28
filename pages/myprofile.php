@@ -50,13 +50,13 @@
         <!-- Upload Button -->
         <div class="upload-button">
             <form class="" action="" method="POST" automcomplete="off" enctype="multipart/form-data">
-            <label for="title">Title:</label>
-            <input type="text" name="title" id="title" placeholder="Title" required><br>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" placeholder="Title" required><br>
 
-            <label for="image">Upload a Photo:</label>
-            <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png"><br>
+                <label for="image">Upload a Photo:</label>
+                <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png"><br>
 
-            <button type="submit" name="submit">Upload</button>
+                <button type="submit" name="submit">Upload</button>
 
             </form>
         </div>
