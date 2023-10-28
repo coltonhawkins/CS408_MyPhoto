@@ -31,22 +31,22 @@ nav li {
     margin: 0 1em; /* Add margin to separate list items (using em) */
 }
 
-nav a {
-    text-decoration: none; /* Remove underlines from links */
-    color: #fafafa; /* Text color for links */
-    font-weight: bold; /* Bold text for links */
-    padding: 0.5em 1em; /* Padding around links (using em) */
-    border-radius: 5px; /* Rounded corners for links */
-    font-size: 1.8em; /* Font size for menu text (adjust as needed) */
-    transition: all 0.3s ease-in-out;
+nav a, .user-greeting {
+    text-decoration: none;
+    color: #fff; /* Set your desired text color */
+    font-weight: bold;
+    display: inline-block; /* Ensure the list items have the same styling */
+    padding: 5px 10px; /* Add padding to match the other items */
+    border: 1px solid transparent; /* Add a border for consistency */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    transition: background-color 0.3s, border-color 0.3s; /* Add a smooth transition effect */
 }
 
-/* Style the user greeting if logged in */
-.user-greeting {
-    color: #3498db; /* Set your desired text color */
-    margin: 0;
-    font-weight: bold;
-    font-size: 18px; /* Adjust the font size as needed */
+/* Style the user greeting on hover */
+nav li.user-greeting:hover {
+    background-color: #555; /* Set a background color on hover */
+    border-color: #fff; /* Set a border color on hover */
+    transition: background-color 0.3s, border-color 0.3s; /* Add the same transition on hover */
 }
 
 
