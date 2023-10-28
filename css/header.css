@@ -41,6 +41,15 @@ nav a {
     transition: all 0.3s ease-in-out;
 }
 
+/* Style the user greeting if logged in */
+.user-greeting {
+    color: #3498db; /* Set your desired text color */
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+
 /* Menu Hover Effect */
 nav a:hover {
     background-color: #3498db; /* Background color on hover */
