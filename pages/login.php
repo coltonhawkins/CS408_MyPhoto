@@ -59,18 +59,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         input {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
 
         /* Submit button */
         button {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #007BFF;
+            color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
+            font-size: 18px;
             cursor: pointer;
         }
 
