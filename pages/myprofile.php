@@ -40,11 +40,11 @@ if(isset($_POST["submit"])) {
             
             // Use prepared statements to prevent SQL injection
             $stmt = $mysqli->prepare("INSERT INTO tb_upload (name, image, user_id) VALUES (?, ?, ?)");
-            $stmt->bind_param("ssi", $name, $newFileName, $_SESSION["user_id"]);
+            $stmt->bind_param("ssi", $name, $newFileName, $user["id"]);
             
             if ($stmt->execute()) {
                 echo "<script>Successfully uploaded</script>";
-                header("Location: ../pages/feed.php");
+                header("Location: myprofile.php");
                 exit;
             } else {
                 echo "<script>Failed to upload</script>";
