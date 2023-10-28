@@ -45,12 +45,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         form {
             width: 300px;
             margin: 0 auto;
-            text-align: center;
+            
         }
 
         /* Labels */
         label {
             display: block;
+            font-weight: bold;
             margin-bottom: 5px;
         }
 
