@@ -14,7 +14,7 @@
 </head>
 <?php include 'header.php'; ?>
 <body>
-    <h1>My Foto - SignUp</h1>
+    <h1>My Foto - Sign Up</h1>
 
     <style>
         /* Style the form container */
