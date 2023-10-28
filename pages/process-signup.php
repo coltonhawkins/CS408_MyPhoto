@@ -51,7 +51,7 @@ $stmt->bind_param("sss",
 
 if ($stmt->execute()) {
 
-    header("Location: ../pages/home.php");
+    header("Location: ../pages/signup-success.php");
     exit;
     
 } else {
