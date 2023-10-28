@@ -1,5 +1,7 @@
 <?php
 
+$is_invalid = false;
+
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $mysqli = require __DIR__ . "/Doo.php";
@@ -10,8 +12,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $user = $result->fetch_assoc();
 
-    var_dump($user);
-    exit;
+    if($user){
+            
+            if(password_verify($_POST["password"], $user["password_hash"])){
+    
+                die("Login successful");
+    
+            } 
+    }
+    $is_invalid = true;
 }
 
 ?>
@@ -42,6 +51,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         }
     </style>
     <h1>My Foto - Login</h1>
+    <?php if($is_invalid): ?>
+        <p style="color: red;">Invalid Login</p>
+    <?php endif; ?>
 
     <form method="post">
 
