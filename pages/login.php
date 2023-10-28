@@ -16,7 +16,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             
             if(password_verify($_POST["password"], $user["password_hash"])){
     
-                die("Login successful");
+                session_start();
+
+                $_SESSION["user_id"] = $user["id"];
+
+                header("Location: ../pages/home.php");
+                exit;
     
             } 
     }
