@@ -1,3 +1,20 @@
+<?php
+
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+
+    $mysqli = require __DIR__ . "/Doo.php";
+
+    $sql = sprintf("SELECT * FROM user WHERE email = '%s'", $mysqli->real_escape_string($_POST["email"]));
+
+    $result = $mysqli->query($sql);
+
+    $user = $result->fetch_assoc();
+
+    var_dump($user);
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +43,7 @@
     </style>
     <h1>My Foto - Login</h1>
 
-    <form>
+    <form method="post">
 
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="Enter your email address">
