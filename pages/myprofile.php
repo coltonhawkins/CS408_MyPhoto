@@ -44,7 +44,7 @@ if(isset($_POST["submit"])) {
             
             if ($stmt->execute()) {
                 echo "<script>Successfully uploaded</script>";
-                header("Location: ../pages/myprofile.php");
+                header("Location: ../pages/feed.php");
                 exit;
             } else {
                 echo "<script>Failed to upload</script>";
