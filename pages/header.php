@@ -30,7 +30,7 @@ session_start();
         <li><a href="../pages/about.php">About</a></li>
         <?php if (isset($_SESSION["user_id"])): ?>
             <li><a href="../pages/myprofile.php">My Profile</a></li>
-            <li><a href="../pages/404.php">Log Out</a></li>
+            <li><a href="../pages/logout.php">Log Out</a></li>
         <?php else: ?>
             <li><a href="../pages/login.php">Login</a></li>
             <li><a href="../pages/signup.php">Sign Up</a></li>
