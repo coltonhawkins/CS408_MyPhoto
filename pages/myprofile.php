@@ -38,7 +38,6 @@
             <?php if (isset($user)): ?>
                 <h3><?= htmlspecialchars($user["name"]) ?></h3>
                 <p>Email: <?= htmlspecialchars($user["email"]) ?></p>
-                <p>Member Since: <?= htmlspecialchars($user["created_date"]) ?></p>
             <?php endif; ?>
             </div>
         </div>
@@ -50,10 +49,12 @@
 
         <!-- Upload Button -->
         <div class="upload-button">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <label for="photoUpload">Upload a Photo:</label>
-                <input type="file" name="photoUpload" id="photoUpload">
-                <input type="submit" value="Upload">
+            <form class="" action="" method="POST" automcomplete="off" enctype="multipart/form-data">
+                <label for="name"> Title: </label>
+                <input type="text" name="title" placeholder="Title" required><br>
+                <label for="image">Upload a Photo:</label>
+                <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png" value=""><br>
+                <button type="submit" name="submit">Upload</button>
             </form>
         </div>
     </section>
