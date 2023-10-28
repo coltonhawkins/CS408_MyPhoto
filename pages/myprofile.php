@@ -34,7 +34,7 @@ if(isset($_POST["submit"])) {
         else {
             $newFileName = uniqid("", true) . "." . $imageExtension;
             
-            move_uploaded_file($tmpName, 'img/' . $newFileName);
+            move_uploaded_file($tmpName, 'images/' . $newFileName);
             
             $mysqli = require __DIR__ . "/Doo.php";
             
