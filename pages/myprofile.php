@@ -58,6 +58,12 @@ if(isset($_POST["submit"])) {
 <html lang="en">
 <head>
     <!-- Your HTML head content here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <title>My Profile - My Foto</title>
 </head>
 <body>
     <?php include 'header.php'; ?>
