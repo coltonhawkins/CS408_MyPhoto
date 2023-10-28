@@ -21,16 +21,7 @@ if(isset($_SESSION["user_id"])) {
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
-<body>
-    <!-- <?php 
-        // require_once('Doo.php'); 
-        // // Create a new Database object
-        // $db = new Database();
-        // // Get a database connection
-        // $connection = $db->getConnection();
-    ?> -->
-   
-   
+<body> 
     <header>
         <img src="../images/logo.PNG" alt="logo" width="100" height="100">
     </header>
@@ -41,7 +32,7 @@ if(isset($_SESSION["user_id"])) {
         <li><a href="../pages/about.php">About</a></li>
         <?php if (isset($user)): ?>
             <li><a href="../pages/myprofile.php">My Profile</a></li>
-            <p>Hello, <?= htmlspecialchars($user["name"])</p>
+            <p>Hello, <?= htmlspecialchars($user["name"]) ?></p>
             <li><a href="../pages/logout.php">Log Out</a></li>
         <?php else: ?>
             <li><a href="../pages/login.php">Login</a></li>
