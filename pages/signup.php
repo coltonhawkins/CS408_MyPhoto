@@ -11,6 +11,8 @@
     <title>Signup Page</title>
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src=/js/validation.js defer></script>
 </head>
 <?php include 'header.php'; ?>
 <body>
@@ -65,7 +67,7 @@
 
     </style>
 
-    <form action="process-signup.php" method="post" novalidate>
+    <form action="process-signup.php" method="post" id="signup" novalidate>
     
         <div>
             <label for="name">Name</label>
