@@ -43,13 +43,9 @@
         </div>
 
         <h3>My Photos</h3>
-        <div class="user-photos">
-            <!-- Add user's uploaded photos here -->
-        </div>
-
         <!-- Upload Button -->
         <div class="upload-button">
-            <form class="" action="" method="POST" automcomplete="off" enctype="multipart/form-data">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
                 <label for="name">Title:</label>
                 <input type="text" name="name" id="name" placeholder="Title" required><br>
 
@@ -57,8 +53,13 @@
                 <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png" value=""><br><br>
 
                 <button type="submit" name="submit">Submit</button>
-
+                
+                
             </form>
+        </div>
+
+        <div class="user-photos">
+            <!-- Add user's uploaded photos here -->
         </div>
     </section>
 
