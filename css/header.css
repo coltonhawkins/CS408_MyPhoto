@@ -60,3 +60,13 @@ nav li.logout a {
         margin: 10px 0;
     }
 }
+/* Style the user greeting if logged in */
+nav p {
+    color: #fff; /* Set your desired text color */
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+
+
