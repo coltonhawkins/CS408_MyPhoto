@@ -49,8 +49,21 @@ $stmt->bind_param("sss",
                   $_POST["email"],
                   $password_hash);
 
-$stmt->execute();
-echo "User created successfully";
+if ($stmt->execute()) {
+
+    header("Location: ../pages/home.php");
+    exit;
+    
+} else {
+    
+    if ($mysqli->errno === 1062) {
+        die("email already taken");
+    } else {
+        die($mysqli->error . " " . $mysqli->errno);
+    }
+}
+
+
 
 print_r($_POST);
 var_dump($password_hash);
