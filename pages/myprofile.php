@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    require __DIR__ . "/Doo.php";
 
     if(isset($_SESSION["user_id"])) {
         $mysqli = require __DIR__ . "/Doo.php";
@@ -11,6 +12,46 @@
         
         $user = $result->fetch_assoc();
     } 
+
+    if(isset($_POST["submit"])){
+        $name = $_POST["name"];
+
+        if($_FILES["image"]["error"] === 4){
+            echo "Please upload a photo";
+        }else{
+            $fileName = $_FILES["image"]["name"];
+            $fileSize = $_FILES["image"]["size"];
+            $tmpName = $_FILES["image"]["tmp_name"];
+
+            $validImageExtension = ["jpg", "jpeg", "png"];
+            $imageExtension = explode(".", $fileName);
+            $imageExtension = strtolower(end($imageExtension));
+            if(!in_array($imageExtension, $validImageExtension)){
+                echo "<script>Please upload a photo with a valid extension</script>";
+            }
+            else if($fileSize > 1000000){
+                echo "<script>Please upload a photo with a size less than 1MB</script>";
+            }
+            else{
+                $newFileName = uniqid("", true) . "." . $imageExtension;
+            
+                move_uploaded_file($tmpName, 'img/' . $newFileName);
+
+                $mysqli = require __DIR__ . "/Doo.php";
+
+                $sql = "INSERT INTO tb_upload VALUES ('', '$name', '$newFileName', {$_SESSION["user_id"]})";
+
+                $mysqli->query($sql);
+
+                echo "<script> Successfully uploaded </script>";
+
+                header("Location: ../pages/myprofile.php");
+                exit;
+            }
+        }
+
+
+    }
 
 ?>
 <!DOCTYPE html>
