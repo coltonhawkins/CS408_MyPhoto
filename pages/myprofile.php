@@ -39,7 +39,7 @@ if(isset($_POST["submit"])) {
             $mysqli = require __DIR__ . "/Doo.php";
             
             // Use prepared statements to prevent SQL injection
-            $stmt = $mysqli->prepare("INSERT INTO tb_upload (title, filename, user_id) VALUES (?, ?, ?)");
+            $stmt = $mysqli->prepare("INSERT INTO tb_upload (name, image, user_id) VALUES (?, ?, ?)");
             $stmt->bind_param("ssi", $name, $newFileName, $_SESSION["user_id"]);
             
             if ($stmt->execute()) {
