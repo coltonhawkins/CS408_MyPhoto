@@ -10,7 +10,9 @@
 <?php include 'header.php'; ?>
 <body>
     <h1>My Foto - SignUp</h1>
-    <p>Signup successful!</p>
+    <p>Signup successful! You can now
+    <a href="login.php">Login</a>.
+    </p>
 
     <?php include 'footer.php'; ?>
 </body>
