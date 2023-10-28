@@ -59,10 +59,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <form method="post">
 
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email address">
+        <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" placeholder="Enter your email address">
 
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" placeholder="Enter your password">
+        <input type="password" name="password" id="password" placeholder="Enter your password">
 
         <button type="submit">Login</button>
         
