@@ -39,6 +39,7 @@
                 <h3><?= htmlspecialchars($user["name"]) ?></h3>
                 <p>Email: <?= htmlspecialchars($user["email"]) ?></p>
                 <p>Member Since: <?= htmlspecialchars($user["created_date"]) ?></p>
+            <?php endif; ?>
             </div>
         </div>
 
