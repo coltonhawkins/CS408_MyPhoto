@@ -32,7 +32,7 @@ if(isset($_SESSION["user_id"])) {
         <li><a href="../pages/about.php">About</a></li>
         <?php if (isset($user)): ?>
             <li><a href="../pages/myprofile.php">My Profile</a></li>
-            <p>Hello, <?= htmlspecialchars($user["name"]) ?></p>
+            <li class="user-greeting">Hello, <?= htmlspecialchars($user["name"]) ?></li>
             <li><a href="../pages/logout.php">Log Out</a></li>
         <?php else: ?>
             <li><a href="../pages/login.php">Login</a></li>

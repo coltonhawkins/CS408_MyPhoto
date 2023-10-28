@@ -1,24 +1,4 @@
-body, ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the header */
-header {
-    background-color: #333; /* Set your desired background color */
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Style the logo */
-header img {
-    max-width: 100px; /* Set your desired logo size */
-    max-height: 100px;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Style the navigation menu */
+/* Style the user greeting if logged in */
 nav ul {
     list-style: none;
     text-align: center;
@@ -31,16 +11,9 @@ nav li {
     margin: 0 10px; /* Adjust the spacing between menu items */
 }
 
-nav a {
+nav a, .user-greeting {
     text-decoration: none;
     color: #fff; /* Set your desired text color */
-    font-weight: bold;
-}
-
-/* Style the user greeting if logged in */
-nav p {
-    color: #fff; /* Set your desired text color */
-    margin: 0;
     font-weight: bold;
 }
 
@@ -55,18 +28,8 @@ nav li.logout a {
         flex-direction: column;
     }
 
-    nav li {
+    nav li, .user-greeting {
         display: block;
         margin: 10px 0;
     }
 }
-/* Style the user greeting if logged in */
-nav p {
-    color: #fff; /* Set your desired text color */
-    margin: 0;
-    font-weight: bold;
-    font-size: 18px; /* Adjust the font size as needed */
-}
-
-
-
