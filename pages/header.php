@@ -23,7 +23,9 @@ if(isset($_SESSION["user_id"])) {
 </head>
 <body> 
     <header>
-        <img src="../images/logo.PNG" alt="logo" width="100" height="100">
+        <a href="home.php">
+            <img src="../images/logo.PNG" alt="logo" width="100" height="100">
+        </a>
     </header>
     <nav>
         <ul>

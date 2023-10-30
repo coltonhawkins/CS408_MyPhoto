@@ -12,47 +12,6 @@ if(isset($_SESSION["user_id"])) {
     $user = $result->fetch_assoc();
 } 
 
-if(isset($_POST["submit"])) {
-    $name = $_POST["name"];
-    
-    if($_FILES["image"]["error"] === 4) {
-        echo "Please upload a photo";
-    } else {
-        $fileName = $_FILES["image"]["name"];
-        $fileSize = $_FILES["image"]["size"];
-        $tmpName = $_FILES["image"]["tmp_name"];
-        
-        $validImageExtension = ["jpg", "jpeg", "png"];
-        $imageExtension = explode(".", $fileName);
-        $imageExtension = strtolower(end($imageExtension));
-        if(!in_array($imageExtension, $validImageExtension)) {
-            echo "<script>Please upload a photo with a valid extension</script>";
-        }
-        else if($fileSize > 1000000) {
-            echo "<script>Please upload a photo with a size less than 1MB</script>";
-        }
-        else {
-            $newFileName = uniqid("", true) . "." . $imageExtension;
-            
-            move_uploaded_file($tmpName, 'images/' . $newFileName);
-            
-            $mysqli = require __DIR__ . "/Doo.php";
-            
-            // Use prepared statements to prevent SQL injection
-            $stmt = $mysqli->prepare("INSERT INTO tb_upload (name, image, user_id) VALUES (?, ?, ?)");
-            $stmt->bind_param("ssi", $name, $newFileName, $user["id"]);
-            
-            if ($stmt->execute()) {
-                echo "<script>Successfully uploaded</script>";
-                header("Location: myprofile.php");
-                exit;
-            } else {
-                echo "<script>Failed to upload</script>";
-            }
-            $stmt->close();
-        }
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
