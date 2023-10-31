@@ -16,7 +16,6 @@ if(isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Your HTML head content here -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -46,14 +45,14 @@ if(isset($_SESSION["user_id"])) {
         <h3>My Photos</h3>
         <!-- Upload Button -->
         <div class="upload-button">
-            <form action="" method="post" enctype="multipart/form-data">
-                <label for="name">Title:</label>
-                <input type="text" name="name" id="name" placeholder="Title" required><br>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                
+                <input type="text" name="filename" placeholder="File name">
+                <input type="text" name="filetitle" placeholder="Image title">
+                <input type="text" name="filedesc" placeholder="Image Description">
+                <input type="file" name="file">
+                <button type="submit" name="submit">Upload</button>
 
-                <label for="image">Upload a Photo:</label>
-                <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png" value=""><br><br>
-
-                <button type="submit" name="submit">Submit</button>
             </form>
         </div>
 
