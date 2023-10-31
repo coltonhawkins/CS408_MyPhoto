@@ -21,6 +21,8 @@ if(isset($_SESSION["user_id"])) {
     
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src=/js/validation.js defer></script>
     <title>My Profile - My Foto</title>
 </head>
 <body>
@@ -45,12 +47,12 @@ if(isset($_SESSION["user_id"])) {
         <h3>My Photos</h3>
         <!-- Upload Button -->
         <div class="upload-button">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data">
                 
-                <input type="text" name="filename" placeholder="File name">
-                <input type="text" name="filetitle" placeholder="Image title">
-                <input type="text" name="filedesc" placeholder="Image Description">
-                <input type="file" name="file">
+                <input type="text" name="filename" id="filename" placeholder="File name">
+                <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
+                <input type="text" name="filedesc" id="filedesc" placeholder="Image Description">
+                <input type="file" name="file" id="file">
                 <button type="submit" name="submit">Upload</button>
 
             </form>
