@@ -5,8 +5,6 @@
             $user = "bd816edec88467";
             $pass = "104bcd5f";
 
-            
-
             $mysqli = new mysqli($host, $user, $pass, $db);
            
             if($mysqli->connect_errno) {

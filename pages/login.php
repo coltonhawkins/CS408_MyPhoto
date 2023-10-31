@@ -38,50 +38,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
     <title>Login Page</title>
 </head>
 <?php include 'header.php'; ?>
 <body>
-<style>
-        /* Form container */
-        form {
-            width: 300px;
-            margin: 0 auto;
-            
-        }
 
-        /* Labels */
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        /* Input fields */
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        /* Submit button */
-        button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Hover effect for the button */
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
     <h1>My Foto - Login</h1>
 
     <?php if($is_invalid): ?>
