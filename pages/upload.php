@@ -1,7 +1,7 @@
 <?php
-session_start(); 
+session_start();
 
-if (isset($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newFileName = $_POST['filename'];
     if (empty($newFileName)) {
         $newFileName = "gallery";
@@ -13,31 +13,30 @@ if (isset($_POST['submit'])) {
 
     $file = $_FILES['file'];
 
-    // Extracting the file properties
+    // Extract the file properties
     $fileName = $file['name'];
     $fileType = $file['type'];
     $fileTemp = $file['tmp_name'];
     $fileError = $file['error'];
     $fileSize = $file['size'];
 
-    // Extracting the file extension
-    $fileExt = explode(".", $fileName);
-    $fileActualExt = strtolower(end($fileExt));
+    // Extract the file extension
+    $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
+    $fileActualExt = strtolower($fileExt);
 
-    // Allowing only certain file types
-    $allowed = array("jpg", "jpeg", "png", "PNG", "JPG", "JPEG");
+    // Allow only certain file types
+    $allowed = array("jpg", "jpeg", "png");
 
-    // Error handlers
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
-            if ($fileSize < 2000000) {
+            if ($fileSize < 2000000) { // 2 MB limit
                 $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
-                $fileDestination = "../images/gallery/" . $imageFullName; 
+                $fileDestination = "../images/gallery/" . $imageFullName;
 
                 include_once "../pages/Doo.php";
 
                 if (empty($imageTitle) || empty($imageDesc)) {
-                    header("Location: ../pages/myprofile.php");
+                    header("Location: ../pages/myprofile.php?upload=empty");
                     exit();
                 } else {
                     $sql = "SELECT * FROM gallery;";
@@ -60,8 +59,8 @@ if (isset($_POST['submit'])) {
 
                             move_uploaded_file($fileTemp, $fileDestination);
 
-                            header("Location: ../pages/myprofile.php");
-                            exit(); 
+                            header("Location: ../pages/myprofile.php?upload=success");
+                            exit();
                         }
                     }
                 }
@@ -74,7 +73,7 @@ if (isset($_POST['submit'])) {
             exit();
         }
     } else {
-        echo "You need to upload a proper file type!";
+        echo "You need to upload a proper file type (jpg, jpeg, or png)!";
         exit();
     }
 }
