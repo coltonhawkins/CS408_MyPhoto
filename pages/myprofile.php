@@ -21,6 +21,7 @@ if(isset($_SESSION["user_id"])) {
     
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/myprofile.css">
     <title>My Profile - My Foto</title>
 </head>
 <body>
