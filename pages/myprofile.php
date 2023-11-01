@@ -21,6 +21,7 @@ if(isset($_SESSION["user_id"])) {
     
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/myprofile.css">
     <title>My Profile - My Foto</title>
 </head>
 <body>
@@ -41,51 +42,48 @@ if(isset($_SESSION["user_id"])) {
             <?php endif; ?>
             </div>
         </div>
-
-        <h3>My Photos</h3>
-
-       
-        <div class="gallery-container">
-            <?php
-            session_start(); 
-            require __DIR__ . "/Doo.php";
-
-            $user_id = $_SESSION["user_id"]; // Store user_id in a variable
-            $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
-            $stmt = mysqli_stmt_init($mysqli);
-            if (!mysqli_stmt_prepare($stmt, $sql)) {
-                echo "SQL statement failed!";
-            } else {
-                mysqli_stmt_execute($stmt);
-                $result = mysqli_stmt_get_result($stmt);
-
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<a href="#">
-                        <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"><div>
-                        <h3>' . $row["titleGallery"] . '</h3>
-                        <p>' . $row["descGallery"] . '</p>
-                    </a>';
-                }
-            }
-            ?>
-        </div>
-
-        <!-- Upload Button -->
-        <div class="upload-button">
-            <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data" novalidate>
-                <input type="text" name="filename" id="filename" placeholder="File name">
-                <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
-                <input type="text" name="filedesc" id="filedesc" placeholder="Image Description">
-                <input type="file" name="file" id="file">
-                <button type="submit" name="submit">Upload</button>
-            </form>
-        </div>
-
-        <div class="user-photos">
-            <!-- Display user's uploaded photos here -->
-        </div>
     </section>
 
+    <h3>My Photos</h3>
+
+    
+    <div class="gallery-container">
+        <?php
+        session_start(); 
+        require __DIR__ . "/Doo.php";
+
+        $user_id = $_SESSION["user_id"]; // Store user_id in a variable
+        $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
+        $stmt = mysqli_stmt_init($mysqli);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            echo "SQL statement failed!";
+        } else {
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<a href="#">
+                    <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"><div>
+                    <h3>' . $row["titleGallery"] . '</h3>
+                    <p>' . $row["descGallery"] . '</p>
+                </a>';
+            }
+        }
+        ?>
+    </div>
+
+    <!-- Upload Button -->
+    <div class="upload-button">
+        <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data" novalidate>
+            <input type="text" name="filename" id="filename" placeholder="File name">
+            <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
+            <input type="text" name="filedesc" id="filedesc" placeholder="Image Description">
+            <input type="file" name="file" id="file">
+            <button type="submit" name="submit">Upload</button>
+        </form>
+    </div>
+
     <?php include 'footer.php'; ?>
+
 </body>
 </html>
