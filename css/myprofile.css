@@ -1,8 +1,3 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
 
 /* Set a background color for the body */
 body {
@@ -20,7 +15,6 @@ h1 {
 
 /* Style the profile section */
 #profile-section {
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -53,6 +47,37 @@ h1 {
 h3 {
     margin-top: 20px;
 }
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #333; /* Background color for the gallery item */
+    transition: background-color 0.3s; /* Add a smooth hover effect */
+}
+
+.gallery-item:hover {
+    background-color: #555; /* Change the background color on hover */
+}
+
+.gallery-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.gallery-item p {
+    font-size: 14px;
+    color: #ccc;
+}
+
 
 .gallery-container {
     display: grid;
@@ -103,7 +128,3 @@ button[name="submit"] {
     cursor: pointer;
 }
 
-/* Style the user photos section (you can add more styles here) */
-.user-photos {
-    /* Add your styles here */
-}
