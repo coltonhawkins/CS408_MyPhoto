@@ -30,14 +30,14 @@ if (isset($_POST['submit'])) {
     // Error handlers
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
-            if ($fileSize < 1000000) {
+            if ($fileSize < 2000000) {
                 $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
                 $fileDestination = "../images/gallery/" . $imageFullName; 
 
                 include_once "../pages/Doo.php";
 
                 if (empty($imageTitle) || empty($imageDesc)) {
-                    header("Location: ../pages/myprofile.php?upload=empty");
+                    header("Location: ../pages/myprofile.php");
                     exit();
                 } else {
                     $sql = "SELECT * FROM gallery;";
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 
                             move_uploaded_file($fileTemp, $fileDestination);
 
-                            header("Location: ../pages/myprofile.php?upload=success");
+                            header("Location: ../pages/myprofile.php");
                             exit(); 
                         }
                     }
