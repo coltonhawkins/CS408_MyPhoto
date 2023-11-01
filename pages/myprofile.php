@@ -48,29 +48,29 @@ if(isset($_SESSION["user_id"])) {
 
        
         <div class="gallery-container">
-    <?php
-    session_start(); // Make sure to start the session
-    include_once "../pages/Doo.php";
+            <?php
+            session_start(); // Make sure to start the session
+            include_once "../pages/Doo.php";
 
-    $user_id = $_SESSION["user_id"]; // Store user_id in a variable
-    $sql = "SELECT * FROM gallery WHERE user_id = {$_SESSION["user_id"]} ORDER BY orderGallery DESC;";
-    $stmt = mysqli_stmt_init($mysqli);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        echo "SQL statement failed!";
-    } else {
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
+            $user_id = $_SESSION["user_id"]; // Store user_id in a variable
+            $sql = "SELECT * FROM gallery WHERE user_id = {$_SESSION["user_id"]} ORDER BY orderGallery DESC;";
+            $stmt = mysqli_stmt_init($mysqli);
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
+                echo "SQL statement failed!";
+            } else {
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
 
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo '<a href="#">
-                <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"><div>
-                <h3>' . $row["titleGallery"] . '</h3>
-                <p>' . $row["descGallery"] . '</p>
-            </a>';
-        }
-    }
-    ?>
-</div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<a href="#">
+                        <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"><div>
+                        <h3>' . $row["titleGallery"] . '</h3>
+                        <p>' . $row["descGallery"] . '</p>
+                    </a>';
+                }
+            }
+            ?>
+        </div>
 
         <!-- Upload Button -->
         <div class="upload-button">
