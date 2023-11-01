@@ -93,3 +93,18 @@ button[name="submit"] {
     cursor: pointer;
 }
 
+.upload-button {
+    display: block; /* Make it visible */
+    text-align: center; /* Center align the button */
+    margin-top: 20px;
+}
+
+.upload-button button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
