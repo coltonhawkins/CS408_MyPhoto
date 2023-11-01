@@ -63,7 +63,6 @@ h3 {
     top: 10px; /* Adjust top position as needed */
     left: 10px; /* Adjust left position as needed */
     color: #fff;
-    background-color: #333; /* Background color for the title */
     padding: 5px;
     border-radius: 5px;
 }
@@ -74,7 +73,6 @@ h3 {
     bottom: 10px; /* Adjust bottom position as needed */
     left: 10px; /* Adjust left position as needed */
     color: #fff;
-    background-color: #333; /* Background color for the description */
     padding: 5px;
     border-radius: 5px;
 }
