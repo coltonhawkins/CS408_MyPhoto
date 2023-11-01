@@ -48,7 +48,7 @@ if(isset($_SESSION["user_id"])) {
         <div class="gallery-container">
             <?php
             session_start(); 
-            include_once "../pages/Doo.php";
+            require __DIR__ . "/Doo.php";
 
             $user_id = $_SESSION["user_id"]; // Store user_id in a variable
             $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
