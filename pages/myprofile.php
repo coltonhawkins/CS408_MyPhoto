@@ -49,11 +49,11 @@ if(isset($_SESSION["user_id"])) {
        
         <div class="gallery-container">
             <?php
-            session_start(); // Make sure to start the session
+            session_start(); 
             include_once "../pages/Doo.php";
 
             $user_id = $_SESSION["user_id"]; // Store user_id in a variable
-            $sql = "SELECT * FROM gallery WHERE user_id = {$_SESSION["user_id"]} ORDER BY orderGallery DESC;";
+            $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC;";
             $stmt = mysqli_stmt_init($mysqli);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
                 echo "SQL statement failed!";
