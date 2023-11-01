@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     $fileActualExt = strtolower(end($fileExt));
 
     // Allowing only certain file types
-    $allowed = array("jpg", "jpeg", "png", "PNG");
+    $allowed = array("jpg", "jpeg", "png", "PNG", "JPG", "JPEG");
 
     // Error handlers
     if (in_array($fileActualExt, $allowed)) {
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
                 $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
                 $fileDestination = "../images/gallery/" . $imageFullName; 
 
-                include_once "../Doo.php"; // Fixed the path
+                include_once "../pages/Doo.php";
 
                 if (empty($imageTitle) || empty($imageDesc)) {
                     header("Location: ../pages/myprofile.php?upload=empty");
