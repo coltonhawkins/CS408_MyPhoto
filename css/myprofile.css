@@ -1,24 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Reset some default styles */
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
 
+/* Set a background color for the body */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Page title styling */
 h1 {
     text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    font-size: 24px;
+    margin: 20px 0;
 }
 
+/* Profile section */
 #profile-section {
-    background-color: #fff;
+    background-color: white;
+    border: 1px solid #ddd;
     padding: 20px;
     margin: 20px;
-    border: 1px solid #ccc;
 }
 
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Profile info styling */
 .profile-info {
     display: flex;
     align-items: center;
@@ -31,36 +51,57 @@ h1 {
 .profile-picture img {
     max-width: 150px;
     max-height: 150px;
+    border: 1px solid #ddd;
 }
 
-.profile-details {
-    font-size: 1.2em;
+.profile-details h3 {
+    font-size: 20px;
 }
 
+.profile-details p {
+    font-size: 16px;
+}
+
+/* Gallery container */
 .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.gallery-container a div{
-    width: 100%;
-    height: 235px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.gallery-container a div {
+   width: 100%;
+   height: 235px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
+.gallery-container a:hover {
+    background-color: #f2f2f2;
+}
+
+.gallery-container h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.gallery-container p {
+    font-size: 14px;
+}
+
+/* Upload button styling */
 .upload-button {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: white;
+    border: 1px solid #ddd;
     padding: 20px;
     margin: 20px;
 }
 
-input[type="text"],
-input[type="file"],
-button {
+#uploadGallery input[type="text"],
+#uploadGallery input[type="file"],
+#uploadGallery button {
     display: block;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
+
