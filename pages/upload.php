@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     $fileActualExt = strtolower(end($fileExt));
 
     // Allowing only certain file types
-    $allowed = array("jpg", "jpeg", "png");
+    $allowed = array("jpg", "jpeg", "png", "PNG");
 
     // Error handlers
     if (in_array($fileActualExt, $allowed)) {
