@@ -1,74 +1,109 @@
-/* Reset some default styles for better consistency */
-body, h1, h2, h3, p {
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
+/* Set a background color for the body */
 body {
+    background-color: #f5f5f5;
     font-family: Arial, sans-serif;
 }
 
-/* Header styles (you can customize these further) */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Page title */
+/* Style the main heading */
 h1 {
     text-align: center;
-    margin: 20px 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
 }
 
-/* Profile section */
+/* Style the profile section */
 #profile-section {
-    margin: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Profile picture */
-.profile-picture img {
-    border-radius: 50%;
-}
-
-/* Profile details */
-.profile-details {
-    margin-left: 20px;
-}
-
-/* Gallery container */
-.gallery-container {
+/* Style the profile info */
+.profile-info {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-picture img {
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Style the profile details */
+.profile-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 16px;
+}
+
+/* Style the gallery */
+h3 {
+    margin-top: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-/* Individual gallery item */
 .gallery-container a {
     text-decoration: none;
     color: #333;
-    background-color: #f9f9f9;
+}
+
+.gallery-container a div {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
     border: 1px solid #ddd;
-    padding: 10px;
     border-radius: 5px;
-    display: inline-block;
-    width: calc(33.33% - 20px); /* Adjust the width as needed for your layout */
-    box-sizing: border-box;
-    text-align: center;
 }
 
-/* Upload button styles */
+.gallery-container h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.gallery-container p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Style the upload form */
 .upload-button {
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
-/* Form input styles (customize as needed) */
-input[type="text"], input[type="file"], button {
-    margin: 5px;
-    padding: 10px;
+#filename, #filetitle, #filedesc, #file {
     width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
+button[name="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the user photos section (you can add more styles here) */
+.user-photos {
+    /* Add your styles here */
+}
