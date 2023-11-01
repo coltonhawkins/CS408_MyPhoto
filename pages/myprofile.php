@@ -61,12 +61,13 @@ if(isset($_SESSION["user_id"])) {
                 $result = mysqli_stmt_get_result($stmt);
 
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<div class="gallery-item">
+                    echo '<a href="#">
                         <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"></div>
                         <h3>' . $row["titleGallery"] . '</h3>
                         <p>' . $row["descGallery"] . '</p>
-                    </div>';
-                }                
+                    </a>';
+                }
+                
             }
             ?>
         </div>
