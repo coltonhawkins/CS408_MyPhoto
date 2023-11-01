@@ -60,7 +60,6 @@ h3 {
     padding: 10px;
     text-align: center;
     color: #fff;
-    background-color: #333; /* Background color for the gallery item */
     transition: background-color 0.3s; /* Add a smooth hover effect */
 }
 
