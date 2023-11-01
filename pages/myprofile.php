@@ -21,8 +21,6 @@ if(isset($_SESSION["user_id"])) {
     
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
-    <!-- <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
-    <script src=/js/validation.js defer></script> -->
     <title>My Profile - My Foto</title>
 </head>
 <body>
@@ -53,7 +51,7 @@ if(isset($_SESSION["user_id"])) {
             include_once "../pages/Doo.php";
 
             $user_id = $_SESSION["user_id"]; // Store user_id in a variable
-            $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC;";
+            $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
             $stmt = mysqli_stmt_init($mysqli);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
                 echo "SQL statement failed!";
