@@ -48,29 +48,31 @@ if(isset($_SESSION["user_id"])) {
        
         <div class="gallery-container">
             <?php
-            session_start(); 
-            require __DIR__ . "/Doo.php";
+                session_start();
+                require __DIR__ . "/Doo.php";
 
-            $user_id = $_SESSION["user_id"]; // Store user_id in a variable
-            $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
-            $stmt = mysqli_stmt_init($mysqli);
-            if (!mysqli_stmt_prepare($stmt, $sql)) {
-                echo "SQL statement failed!";
-            } else {
-                mysqli_stmt_execute($stmt);
-                $result = mysqli_stmt_get_result($stmt);
+                $user_id = $_SESSION["user_id"]; // Store user_id in a variable
+                $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
+                $stmt = mysqli_stmt_init($mysqli);
 
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<a href="#">
-                        <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"></div>
-                        <h3>' . $row["titleGallery"] . '</h3>
-                        <p>' . $row["descGallery"] . '</p>
-                    </a>';
+                if (!mysqli_stmt_prepare($stmt, $sql)) {
+                    echo "SQL statement failed!";
+                } else {
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $imagePath = "../images/gallery/" . $row["imgFullNameGallery"]; // Correct path to your images
+                        echo '<a href="#">
+                            <div style="background-image: url(' . $imagePath . ');"></div>
+                            <h3>' . $row["titleGallery"] . '</h3>
+                            <p>' . $row["descGallery"] . '</p>
+                        </a>';
+                    }
                 }
-                
-            }
             ?>
         </div>
+
 
         <!-- Upload Button -->
         <div class="upload-button">
