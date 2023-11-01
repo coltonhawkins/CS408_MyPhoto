@@ -21,8 +21,8 @@ if(isset($_SESSION["user_id"])) {
     
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
-    <script src=/js/validation.js defer></script>
+    <!-- <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src=/js/validation.js defer></script> -->
     <title>My Profile - My Foto</title>
 </head>
 <body>
@@ -48,27 +48,27 @@ if(isset($_SESSION["user_id"])) {
 
        
         <div class="gallery-container">
-        <?php
+            <?php
 
-        include_once "/Doo.php";
+                include_once "../pages/Doo.php";
 
-        $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC WHERE user_id = {$_SESSION["user_id"]};";
-        $stmt = mysqli_stmt_init($mysqli);
-        if(!mysqli_stmt_prepare($stmt, $sql)){
-            echo "SQL statement failed!";
-        }else{
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
+                $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC WHERE user_id = {$_SESSION["user_id"]};";
+                $stmt = mysqli_stmt_init($mysqli);
+                if(!mysqli_stmt_prepare($stmt, $sql)){
+                    echo "SQL statement failed!";
+                }else{
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
 
-            while($row = mysqli_fetch_assoc($result)){
-                echo '<a href="#">
-                    <div style="background-image: url(../images/gallery/'.$row["imgFullNameGallery"].');"><div>
-                    <h3>'.$row["titleGallery"].'</h3>
-                    <p>'.$row["descGallery"].'</p>
-                </a>';
-            }
-        }
-        ?>
+                    while($row = mysqli_fetch_assoc($result)){
+                        echo '<a href="#">
+                            <div style="background-image: url(../images/gallery/'.$row["imgFullNameGallery"].');"><div>
+                            <h3>'.$row["titleGallery"].'</h3>
+                            <p>'.$row["descGallery"].'</p>
+                        </a>';
+                    }
+                }
+            ?>
         </div>
 
         <!-- Upload Button -->
