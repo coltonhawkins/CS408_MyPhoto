@@ -54,28 +54,36 @@ h3 {
     height: 200px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    transition: background-color 0.3s; /* Add a smooth hover effect */
-}
-
-.gallery-item:hover {
-    background-color: #555; /* Change the background color on hover */
+    position: relative; /* Added to enable proper positioning of text over the image */
 }
 
 .gallery-item h3 {
     font-size: 16px;
-    margin: 10px 0;
+    position: absolute; /* Position text absolutely within the .gallery-item */
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    color: #fff;
+    background-color: #333; /* Background color for the title */
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .gallery-item p {
     font-size: 14px;
-    color: #ccc;
+    position: absolute; /* Position text absolutely within the .gallery-item */
+    bottom: 10px; /* Adjust bottom position as needed */
+    left: 10px; /* Adjust left position as needed */
+    color: #fff;
+    background-color: #333; /* Background color for the description */
+    padding: 5px;
+    border-radius: 5px;
 }
+
+/* Style the gallery items on hover */
+.gallery-item:hover {
+    background-color: #555; /* Change the background color on hover */
+}
+
 
 
 .gallery-container {

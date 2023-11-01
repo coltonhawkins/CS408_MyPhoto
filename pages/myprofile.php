@@ -66,7 +66,7 @@ if(isset($_SESSION["user_id"])) {
                         <h3>' . $row["titleGallery"] . '</h3>
                         <p>' . $row["descGallery"] . '</p>
                     </a>';
-                }
+                }                
             }
             ?>
         </div>
