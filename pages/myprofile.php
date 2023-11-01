@@ -21,7 +21,7 @@ if(isset($_SESSION["user_id"])) {
     
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="../css/myprofile.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/myprofile.css"> -->
     <title>My Profile - My Foto</title>
 </head>
 <body>
@@ -61,11 +61,11 @@ if(isset($_SESSION["user_id"])) {
                 $result = mysqli_stmt_get_result($stmt);
 
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<a href="#">
-                        <div class="gallery-item" style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"></div>
+                    echo '<div class="gallery-item">
+                        <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"></div>
                         <h3>' . $row["titleGallery"] . '</h3>
                         <p>' . $row["descGallery"] . '</p>
-                    </a>';
+                    </div>';
                 }                
             }
             ?>
