@@ -11,14 +11,13 @@ if(isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
 } 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/myprofile.css">
@@ -32,61 +31,60 @@ if(isset($_SESSION["user_id"])) {
         <h2>My Profile</h2>
         <div class="profile-info">
             <div class="profile-picture">
-                <!-- Display user profile picture here -->
                 <img src="../images/profile.PNG" alt="Profile Picture" width="150" height="150">
             </div>
             <div class="profile-details">
-            <?php if (isset($user)): ?>
-                <h3><?= htmlspecialchars($user["name"]) ?></h3>
-                <p>Email: <?= htmlspecialchars($user["email"]) ?></p>
-            <?php endif; ?>
+                <?php if (isset($user)): ?>
+                    <h3><?= htmlspecialchars($user["name"]) ?></h3>
+                    <p>Email: <?= htmlspecialchars($user["email"]) ?></p>
+                <?php endif; ?>
             </div>
         </div>
     </section>
 
-    <h3>My Photos</h3>
+    <section id="photos-section">
+        <h3>My Photos</h3>
+        <div class="gallery-container">
+            <?php
+            session_start(); 
+            require __DIR__ . "/Doo.php";
 
-    
-    <div class="gallery-container">
-        <?php
-        session_start(); 
-        require __DIR__ . "/Doo.php";
-
-        $user_id = $_SESSION["user_id"]; // Store user_id in a variable
-        $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
-        $stmt = mysqli_stmt_init($mysqli);
-        if (!mysqli_stmt_prepare($stmt, $sql)) {
-            echo "SQL statement failed!";
-        } else {
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<a href="#">
-                    <div>
-                        <img src="../images/gallery/' . $row["imgFullNameGallery"] . '">
-                        <h3>' . $row["titleGallery"] . '</h3>
-                        <p>' . $row["descGallery"] . '</p>
-                    </div>
-                </a>';
-            }
+            $user_id = $_SESSION["user_id"];
+            $sql = "SELECT * FROM gallery WHERE user_id = $user_id ORDER BY orderGallery DESC";
+            $stmt = mysqli_stmt_init($mysqli);
             
-        }
-        ?>
-    </div>
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
+                echo "SQL statement failed!";
+            } else {
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
 
-    <!-- Upload Button -->
-    <div class="upload-button">
-        <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data" novalidate>
-            <input type="text" name="filename" id="filename" placeholder="File name">
-            <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
-            <input type="text" name="filedesc" id="filedesc" placeholder="Image Description">
-            <input type="file" name="file" id="file">
-            <button type="submit" name="submit">Upload</button>
-        </form>
-    </div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<a href="#">
+                        <div>
+                            <img src="../images/gallery/' . $row["imgFullNameGallery"] . '">
+                            <h3>' . $row["titleGallery"] . '</h3>
+                            <p>' . $row["descGallery"] . '</p>
+                        </div>
+                    </a>';
+                }
+            }
+            ?>
+        </div>
+    </section>
+
+    <section id="upload-section">
+        <div class="upload-button">
+            <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data" novalidate>
+                <input type="text" name="filename" id="filename" placeholder="File name">
+                <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
+                <input type="text" name="filedesc" id="filedesc" placeholder="Image Description">
+                <input type="file" name="file" id="file">
+                <button type="submit" name="submit">Upload</button>
+            </form>
+        </div>
+    </section>
 
     <?php include 'footer.php'; ?>
-
 </body>
 </html>
