@@ -54,23 +54,28 @@ h2 {
     font-size: 16px;
 }
 
-/* Gallery container */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the minimum width and columns as needed */
+    gap: 20px; /* Adjust the gap between gallery items as needed */
+    padding: 20px; /* Add padding to create spacing around the gallery */
 }
 
-.gallery-container a div {
-   width: 100%;
-   height: 235px;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+.gallery-container a {
+    text-decoration: none;
+    color: #333; /* Set the color for link text */
 }
 
-.gallery-container a:hover {
-    background-color: #f2f2f2;
+.gallery-container div {
+    border: 1px solid #ccc; /* Add a border to each gallery item */
+    padding: 10px;
+    background-color: #f9f9f9; /* Set a background color for each item */
+    text-align: center;
+}
+
+.gallery-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .gallery-container h3 {
@@ -80,7 +85,9 @@ h2 {
 
 .gallery-container p {
     font-size: 14px;
+    margin: 10px 0;
 }
+
 
 /* Upload button styling */
 .upload-button {
