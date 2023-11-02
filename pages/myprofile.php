@@ -63,11 +63,14 @@ if(isset($_SESSION["user_id"])) {
 
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<a href="#">
-                    <div style="background-image: url(../images/gallery/' . $row["imgFullNameGallery"] . ');"><div>
-                    <h3>' . $row["titleGallery"] . '</h3>
-                    <p>' . $row["descGallery"] . '</p>
+                    <div>
+                        <img src="../images/gallery/' . $row["imgFullNameGallery"]">
+                        <h3>' . $row["titleGallery"] . '</h3>
+                        <p>' . $row["descGallery"] . '</p>
+                    </div>
                 </a>';
             }
+            
         }
         ?>
     </div>
