@@ -1,108 +1,94 @@
 /* Reset some default styles */
-body, h1, h2, h3, p {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-}
-
-/* Set a background color for the body */
-body {
-    background-color: #f2f2f2;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-}
-
-/* Page title styling */
-h1 {
+  }
+  
+  /* Global styles */
+  h1 {
     text-align: center;
-    font-size: 24px;
-    margin: 20px 0;
-}
-
-/* Profile section */
-#profile-section {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-}
-
-h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Profile info styling */
-.profile-info {
+    margin-top: 20px;
+  }
+  
+  #profile-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-info {
     display: flex;
     align-items: center;
-}
-
-.profile-picture {
-    margin-right: 20px;
-}
-
-.profile-picture img {
+    justify-content: center;
+  }
+  
+  .profile-picture img {
     max-width: 150px;
     max-height: 150px;
-    border: 1px solid #ddd;
-}
-
-.profile-details h3 {
-    font-size: 20px;
-}
-
-.profile-details p {
-    font-size: 16px;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust the minimum width and columns as needed */
-    gap: 10px; /* Adjust the gap between gallery items as needed */
-    padding: 20px; /* Add padding to create spacing around the gallery */
-}
-
-.gallery-container a {
+    border: 2px solid #555;
+    border-radius: 50%;
+  }
+  
+  .profile-details {
+    margin-left: 20px;
+    text-align: left;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .gallery-container a {
     text-decoration: none;
-    color: #333; /* Set the color for link text */
-}
-
-.gallery-container div {
-    border: 1px solid #ccc; /* Add a border to each gallery item */
-    padding: 10px;
-    background-color: #f9f9f9; /* Set a background color for each item */
-    text-align: center;
-}
-
-.gallery-container img {
+    color: #333;
+    margin: 10px;
+  }
+  
+  .gallery-container img {
     max-width: 100%;
     height: auto;
-    max-height: 150px; /* Set the maximum height for the images (adjust as needed) */
-}
-
-.gallery-container h3 {
-    font-size: 16px; /* Smaller font size for the title */
-    margin: 8px 0;
-}
-
-.gallery-container p {
-    font-size: 14px;
-    margin: 8px 0;
-}
-
-
-
-/* Upload button styling */
-.upload-button {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-}
-
-#uploadGallery input[type="text"],
-#uploadGallery input[type="file"],
-#uploadGallery button {
-    display: block;
-    margin: 10px 0;
-}
-
+    border: 1px solid #555;
+    border-radius: 5px;
+  }
+  
+  .upload-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #uploadGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #filename,
+  #filetitle,
+  #filedesc {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  #file {
+    width: 100%;
+    margin: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Header and Footer styles */
+  /* Add styles for your header and footer based on your design */
+  
