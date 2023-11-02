@@ -56,8 +56,8 @@ h2 {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the minimum width and columns as needed */
-    gap: 20px; /* Adjust the gap between gallery items as needed */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust the minimum width and columns as needed */
+    gap: 10px; /* Adjust the gap between gallery items as needed */
     padding: 20px; /* Add padding to create spacing around the gallery */
 }
 
@@ -75,18 +75,20 @@ h2 {
 
 .gallery-container img {
     max-width: 100%;
-    height: 235px;
+    height: auto;
+    max-height: 150px; /* Set the maximum height for the images (adjust as needed) */
 }
 
 .gallery-container h3 {
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 16px; /* Smaller font size for the title */
+    margin: 8px 0;
 }
 
 .gallery-container p {
     font-size: 14px;
-    margin: 10px 0;
+    margin: 8px 0;
 }
+
 
 
 /* Upload button styling */
