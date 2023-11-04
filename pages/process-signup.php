@@ -52,7 +52,21 @@ if ( ! $stmt->prepare($sql)) {
 $stmt->bind_param("sss",
                   $_POST["name"],
                   $_POST["email"],
-                  $password_hash);             
+                  $password_hash);
+
+//Profile Image Code
+
+ $id = $_SESSION['user_id'];
+
+ $result = $mysqli->query($sql);
+
+ if(mysqli_num_rows($result) > 0){
+     while($row = mysqli_fetch_assoc($result)){
+         $id = $row['user_id'];
+         $sql = "INSERT INTO profileimg (user_id, status) VALUES ($id, 1)";
+         $result = $mysqli->query($sql);
+     }
+ }                 
 
 //executing the sql statement
 if ($stmt->execute()) {
