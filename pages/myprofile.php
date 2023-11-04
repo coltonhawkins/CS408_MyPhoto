@@ -31,32 +31,35 @@ if(isset($_SESSION["user_id"])) {
 
         $sql = "SELECT * FROM user";
         $result = $mysqli->query($sql);
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_assoc($result)){
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
                 $id = $row['user_id'];
                 $sqlImg = "SELECT * FROM profileimg WHERE user_id='$id'";
-                $resultImg = $mysqli->query($sql);
-                while($rowImg = mysqli_fetch_assoc($resultImg)){
+                $resultImg = $mysqli->query($sqlImg); // Fix the variable name here
+
+                while ($rowImg = mysqli_fetch_assoc($resultImg)) {
                     echo "<div>";
-                        if($rowImg['status'] == 0){
-                            echo "<img src='../images/profile/profile".$id.".jpg?".mt_rand()."'>";
-                        } else {
-                            echo "<img src='../images/profile/default.PNG'>";
-                        }
-                        echo "<p>".$row['username']."</p>";
-                        echo "<p>".$row['email']."</p>";
+                    if ($rowImg['status'] == 0) {
+                        echo "<img src='../images/profile/profile" . $id . ".jpg?" . mt_rand() . "'>";
+                    } else {
+                        echo "<img src='../images/profile/default.PNG'>";
+                    }
+                    echo "<p>" . $row['username'] . "</p>";
+                    echo "<p>" . $row['email'] . "</p>";
                     echo "</div>";
                 }
             }
-        }else{
+        } else {
             echo "There are no users yet!";
         }
+        ?>
 
-        echo "<form action="uploadProfile.php" method="post" enctype="multipart/form-data" >
-                <input type="file" name="file">
-                <button type="submit" name="submit">Upload</button>
-            </form>";
-    ?>
+        <form action="uploadProfile.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button type="submit" name="submit">Upload</button>
+        </form>
+
 
 
     <section id="photos-section">

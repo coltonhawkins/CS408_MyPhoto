@@ -52,23 +52,7 @@ if ( ! $stmt->prepare($sql)) {
 $stmt->bind_param("sss",
                   $_POST["name"],
                   $_POST["email"],
-                  $password_hash);
-
-//Profile Image Code
-
- $id = $_SESSION['user_id'];
- $sql2 = "SELECT * FROM user WHERE user_id='$id'";
- $result2 = $mysqli->query($sql2);
-
- if(mysqli_num_rows($result2) > 0){
-     while($row = mysqli_fetch_assoc($result2)){
-         $id = $row['user_id'];
-         $sql2 = "INSERT INTO profileimg (user_id, status) VALUES ($id, 1)";
-         $result2 = $mysqli->query($sql2);
-     }
- }else{
-    echo "You have an error!";
- }             
+                  $password_hash);    
 
 //executing the sql statement
 if ($stmt->execute()) {
