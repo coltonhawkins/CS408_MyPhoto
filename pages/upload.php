@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newFileName = $_POST['filename'];
     if (empty($newFileName)) {

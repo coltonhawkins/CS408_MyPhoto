@@ -27,20 +27,11 @@ if(isset($_SESSION["user_id"])) {
     <?php include 'header.php'; ?>
     <h1>My Foto - MyProfile</h1>
 
-    <section id="profile-section">
-        <h2>My Profile</h2>
-        <div class="profile-info">
-            <div class="profile-picture">
-                <img src="../images/profile.PNG" alt="Profile Picture" width="150" height="150">
-            </div>
-            <div class="profile-details">
-                <?php if (isset($user)): ?>
-                    <h3><?= htmlspecialchars($user["name"]) ?></h3>
-                    <p>Email: <?= htmlspecialchars($user["email"]) ?></p>
-                <?php endif; ?>
-            </div>
-        </div>
-    </section>
+    <?php
+
+       
+    ?>
+
 
     <section id="photos-section">
         <h3>My Photos</h3>

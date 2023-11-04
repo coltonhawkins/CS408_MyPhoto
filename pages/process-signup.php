@@ -30,32 +30,37 @@ if($_POST["password"] !== $_POST["password_confirmation"]) {
     die("Passwords do not match");
 }
 
-//hashing the password
+//hashing the password and this function salts it too
 $password_hash = password_hash($_POST["password_confirmation"], PASSWORD_DEFAULT);
 
+//database connection
 $mysqli = require __DIR__ . "/Doo.php";
 
+//sql statement to insert the data into the database
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES (?, ?, ?)";
         
+//preparing the sql statement
 $stmt = $mysqli->stmt_init();
 
+//checking if the sql statement is valid
 if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 
+//binding the parameters to the sql statement
 $stmt->bind_param("sss",
                   $_POST["name"],
                   $_POST["email"],
-                  $password_hash);
+                  $password_hash);             
 
+//executing the sql statement
 if ($stmt->execute()) {
-
     header("Location: ../pages/signup-successful.php");
     exit;
     
 } else {
-    
+    //checking if the email is already taken
     if ($mysqli->errno === 1062) {
         die("email already taken");
     } else {
@@ -63,7 +68,3 @@ if ($stmt->execute()) {
     }
 }
 
-
-
-print_r($_POST);
-var_dump($password_hash);
