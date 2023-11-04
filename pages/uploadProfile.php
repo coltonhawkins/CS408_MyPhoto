@@ -1,4 +1,9 @@
 <?php
+session_start();
+include_once "../pages/Doo.php";
+
+$id = $_SESSION['user_id'];
+
 if(isset($_POST['submit'])){
     $file = $_FILES['file'];
    
@@ -16,9 +21,11 @@ if(isset($_POST['submit'])){
     if(in_array($fileActualExt, $allowed)){
         if($fileError === 0){
             if($fileSize < 2000000){
-                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                $fileNameNew = "profile".$id.".".$fileActualExt;
                 $fileDestination = '../images/profile/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
+                $sql = "UPDATE profileimg SET status=0 WHERE user_id='$id';";
+                $result = $mysqli->query($sql);
                 header("Location: ../pages/myprofile.php?upload=success");
             }else{
                 echo "Your file is too big!";
@@ -26,4 +33,5 @@ if(isset($_POST['submit'])){
         }else{
             echo "There was an error uploading your file!";
         }
+    }
 }

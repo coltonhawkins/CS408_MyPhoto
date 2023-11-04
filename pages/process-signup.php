@@ -57,16 +57,18 @@ $stmt->bind_param("sss",
 //Profile Image Code
 
  $id = $_SESSION['user_id'];
+ $sql2 = "SELECT * FROM user WHERE user_id='$id'";
+ $result2 = $mysqli->query($sql2);
 
- $result = $mysqli->query($sql);
-
- if(mysqli_num_rows($result) > 0){
-     while($row = mysqli_fetch_assoc($result)){
+ if(mysqli_num_rows($result2) > 0){
+     while($row = mysqli_fetch_assoc($result2)){
          $id = $row['user_id'];
-         $sql = "INSERT INTO profileimg (user_id, status) VALUES ($id, 1)";
-         $result = $mysqli->query($sql);
+         $sql2 = "INSERT INTO profileimg (user_id, status) VALUES ($id, 1)";
+         $result2 = $mysqli->query($sql2);
      }
- }                 
+ }else{
+    echo "You have an error!";
+ }             
 
 //executing the sql statement
 if ($stmt->execute()) {

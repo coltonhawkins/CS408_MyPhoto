@@ -39,7 +39,7 @@ if(isset($_SESSION["user_id"])) {
                 while($rowImg = mysqli_fetch_assoc($resultImg)){
                     echo "<div>";
                         if($rowImg['status'] == 0){
-                            echo "<img src='../images/profile/profile".$id.".jpg'>";
+                            echo "<img src='../images/profile/profile".$id.".jpg?".mt_rand()."'>";
                         } else {
                             echo "<img src='../images/profile/default.PNG'>";
                         }
@@ -52,7 +52,7 @@ if(isset($_SESSION["user_id"])) {
             echo "There are no users yet!";
         }
 
-        echo "<form action="upload.php" method="post" enctype="multipart/form-data" >
+        echo "<form action="uploadProfile.php" method="post" enctype="multipart/form-data" >
                 <input type="file" name="file">
                 <button type="submit" name="submit">Upload</button>
             </form>";
