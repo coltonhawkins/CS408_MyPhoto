@@ -47,7 +47,7 @@ validation
     });
     
     
-//const uploadValidation = new JustValidate("#uploadGallery");
+const uploadValidation = new JustValidate("#uploadGallery");
 
 uploadValidation
     .addField("#filename", [
