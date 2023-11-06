@@ -52,7 +52,7 @@ if(isset($_SESSION["user_id"])) {
                             <h3>' . $row["titleGallery"] . '</h3>
                             <p>' . $row["descGallery"] . '</p>
                             <form action="delete_image.php" method="post">
-                                <input type="hidden" name="image_id" value="' . $row["id"] . '">
+                                <input type="hidden" name="image_id" value="' . $row["idGallery"] . '">
                                 <button type="submit" name="delete_image">Delete</button>
                             </form>
                         </div>
