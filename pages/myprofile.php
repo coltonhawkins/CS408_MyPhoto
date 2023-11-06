@@ -10,6 +10,9 @@ if(isset($_SESSION["user_id"])) {
     $result = $mysqli->query($sql);
     
     $user = $result->fetch_assoc();
+}else{
+    header("Location: ../pages/login.php");
+    exit();
 } 
 ?>
 
