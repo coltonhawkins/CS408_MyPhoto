@@ -3,7 +3,7 @@ session_start();
 require __DIR__ . "/Doo.php";
 
 if (isset($_POST["delete_image"])) {
-    $image_id = $_POST["id"];
+    $image_id = $_POST["image_id"];
     $user_id = $_SESSION["user_id"];
 
     // Check if the image belongs to the current user before deleting
@@ -17,11 +17,11 @@ if (isset($_POST["delete_image"])) {
         // Check if any rows were affected
         if (mysqli_stmt_affected_rows($stmt) > 0) {
             // Image deleted successfully
-            header("Location: /pages/myprofile.php"); 
+            header("Location: /pages/myprofile.php"); // Redirect to your gallery page
             exit();
         } else {
             // Image not found or not owned by the user
-            header("Location: myprofile.php?error=image_not_found");
+            header("Location: /pages/myprofile.php?error=image_not_found");
             exit();
         }
     }
