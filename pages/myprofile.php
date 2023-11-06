@@ -21,11 +21,12 @@ if(isset($_SESSION["user_id"])) {
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/myprofile.css">
-    <title>My Gallery - My Foto</title>
+    <title>My Profile - My Foto</title>
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <h1>My Foto - My Gallery</h1>
+    <h1>My Foto - MyProfile</h1>
+
 
     <section id="photos-section">
         <h3>My Photos</h3>
@@ -60,7 +61,7 @@ if(isset($_SESSION["user_id"])) {
 
     <section id="upload-section">
         <div class="upload-button">
-            <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data">
+            <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data" novalidate>
                 <input type="text" name="filename" id="filename" placeholder="File name">
                 <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
                 <input type="text" name="filedesc" id="filedesc" placeholder="Image Description">
