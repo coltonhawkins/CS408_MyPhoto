@@ -33,7 +33,7 @@ if(isset($_SESSION["user_id"])) {
         <li><a href="../pages/feed.php">Feed</a></li>
         <li><a href="../pages/about.php">About</a></li>
         <?php if (isset($user)): ?>
-            <li><a href="../pages/myprofile.php">My Profile</a></li>
+            <li><a href="../pages/myprofile.php">My Gallery</a></li>
             <li style="display: inline-block; margin: 0 1em;">
             <span class="user-greeting" style="color: #3498db; font-size:1.8em; font-weight: bold; display: inline-block; padding: 5px 10px; border: 1px solid transparent; border-radius: 5px; transition: background-color 0.3s, border-color 0.3s;">Hello, <?= htmlspecialchars($user["name"]) ?></span>
             <li><a href="../pages/logout.php">Log Out</a></li>

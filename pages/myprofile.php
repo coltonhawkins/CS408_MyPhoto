@@ -25,45 +25,7 @@ if(isset($_SESSION["user_id"])) {
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <h1>My Foto - MyProfile</h1>
-<?php
-    // Display user information and their profile images
-$sql = "SELECT * FROM user";
-$result = $mysqli->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $id = $row['user_id'];
-        $sqlImg = "SELECT * FROM profileimg WHERE user_id='$id'";
-        $resultImg = $mysqli->query($sqlImg);
-
-        while ($rowImg = $resultImg->fetch_assoc()) {
-            echo "<div>";
-            if ($rowImg['status'] == 0) {
-                echo "<img src='../images/profile/profile" . $id . ".jpg?" . mt_rand() . "'>";
-            } else {
-                echo "<img src='../images/profile/default.PNG'>";
-            }
-            echo "<p>" . $row['username'] . "</p>";
-            echo "<p>" . $row['email'] . "</p>";
-            echo "</div>";
-        }
-    }
-} else {
-    echo "There are no users yet!";
-}
-
-$mysqli->close();
-?>
-
-<!-- Create a form to allow users to upload their profile photo -->
-<form action="uploadProfile.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
-    <button type="submit" name="submit">Upload</button>
-</form>
-
-
+    <h1>My Foto - My Gallery</h1>
 
     <section id="photos-section">
         <h3>My Photos</h3>
