@@ -8,6 +8,7 @@
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
     <title>Photo Feed - My Foto</title>
+    <link rel="stylesheet" type="text/css" href="../css/feed.css">
 </head>
 
 <body>
