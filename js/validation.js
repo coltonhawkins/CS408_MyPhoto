@@ -49,27 +49,27 @@ validation
     
 //const uploadValidation = new JustValidate("#uploadGallery");
 
-// uploadValidation
-//     .addField("#filename", [
-//         {
-//             rule: "required"
-//         }
-//     ])
-//     .addField("#filetitle", [
-//         {
-//             rule: "required"
-//         }
-//     ])
-//     .addField("#filedescription", [
-//         {
-//             rule: "required"
-//         }
-//     ])
-//     .addField("#file", [
-//         {
-//             rule: "required"
-//         }
-//     ])
-//     .onSuccess((event) => {
-//         document.getElementById("uploadGallery").submit();
-//     });
+uploadValidation
+    .addField("#filename", [
+        {
+            rule: "required"
+        }
+    ])
+    .addField("#filetitle", [
+        {
+            rule: "required"
+        }
+    ])
+    .addField("#filedescription", [
+        {
+            rule: "required"
+        }
+    ])
+    .addField("#file", [
+        {
+            rule: "required"
+        }
+    ])
+    .onSuccess((event) => {
+        document.getElementById("uploadGallery").submit();
+    });
