@@ -1,0 +1,75 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Main content styles */
+h1, h2, h3 {
+    color: #333;
+}
+
+#about-section {
+    padding: 20px;
+}
+
+#about-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#about-section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#about-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#about-section li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Links styles */
+
+/* Additional styles for prettiness */
+.container {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#about-section {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#about-section h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#about-section ul {
+    list-style-type: circle;
+}
+
+a {
+    font-weight: bold;
+}
+

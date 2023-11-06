@@ -1,0 +1,96 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Global styles */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-details {
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Photos section styles */
+#photos-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.gallery-container a {
+    text-decoration: none;
+    color: #333;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.gallery-container h3 {
+    margin: 10px 0;
+}
+
+.gallery-container p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Upload section styles */
+#upload-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.upload-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#uploadGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#filename, #filetitle, #filedesc {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+}
+
+#file {
+    width: 100%;
+    margin: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Header and Footer styles */
+/* Add styles for your header and footer based on your design */
