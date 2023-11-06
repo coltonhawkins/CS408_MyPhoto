@@ -47,47 +47,47 @@ validation
     });
     
     
-    const uploadValidation = new JustValidate("#uploadGallery", {
-        rules: {
-            filename: {
-                required: true,
-                // You can add more validation rules if needed
-            },
-            filetitle: {
-                required: true,
-                // You can add more validation rules if needed
-            },
-            filedesc: {
-                required: true,
-                // You can add more validation rules if needed
-            },
-            file: {
-                required: true,
-                fileType: ["jpg", "jpeg", "png", "gif"], // Add the allowed file extensions
-                maxSize: "10mb" // Define the maximum file size
-            }
-        },
-        messages: {
-            filename: {
-                required: "Please enter a file name",
-                // Customize error messages if needed
-            },
-            filetitle: {
-                required: "Please enter an image title",
-                // Customize error messages if needed
-            },
-            filedesc: {
-                required: "Please enter an image description",
-                // Customize error messages if needed
-            },
-            file: {
-                required: "Please select an image file",
-                fileType: "Invalid file format. Allowed formats: jpg, jpeg, png, gif",
-                maxSize: "File size should not exceed 10MB"
-            }
-        },
-        submitHandler: function (form) {
-            // Form is valid, you can submit it
-            form.submit();
-        },
-    });
+    // const uploadValidation = new JustValidate("#uploadGallery", {
+    //     rules: {
+    //         filename: {
+    //             required: true,
+    //             // You can add more validation rules if needed
+    //         },
+    //         filetitle: {
+    //             required: true,
+    //             // You can add more validation rules if needed
+    //         },
+    //         filedesc: {
+    //             required: true,
+    //             // You can add more validation rules if needed
+    //         },
+    //         file: {
+    //             required: true,
+    //             fileType: ["jpg", "jpeg", "png", "gif"], // Add the allowed file extensions
+    //             maxSize: "10mb" // Define the maximum file size
+    //         }
+    //     },
+    //     messages: {
+    //         filename: {
+    //             required: "Please enter a file name",
+    //             // Customize error messages if needed
+    //         },
+    //         filetitle: {
+    //             required: "Please enter an image title",
+    //             // Customize error messages if needed
+    //         },
+    //         filedesc: {
+    //             required: "Please enter an image description",
+    //             // Customize error messages if needed
+    //         },
+    //         file: {
+    //             required: "Please select an image file",
+    //             fileType: "Invalid file format. Allowed formats: jpg, jpeg, png, gif",
+    //             maxSize: "File size should not exceed 2MB"
+    //         }
+    //     },
+    //     submitHandler: function (form) {
+    //         // Form is valid, you can submit it
+    //         form.submit();
+    //     },
+    // });
