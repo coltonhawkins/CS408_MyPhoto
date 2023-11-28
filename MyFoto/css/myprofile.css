@@ -4,8 +4,6 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
-
-
 /* Global styles */
 h1 {
     text-align: center;
@@ -58,39 +56,48 @@ h1 {
 
 /* Upload section styles */
 #upload-section {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.upload-button {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#uploadGallery {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-}
-
-#filename, #filetitle, #filedesc {
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .upload-button {
+    text-align: center;
+  }
+  
+  #uploadGallery {
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: auto;
+  }
+  
+  #uploadGallery input,
+  #uploadGallery button {
+    display: block;
+    margin-bottom: 10px;
     width: 100%;
-    margin: 5px;
-    padding: 5px;
-}
-
-#file {
-    width: 100%;
-    margin: 5px;
-}
-
-button[type="submit"] {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  #file {
+    margin-bottom: 0; /* Remove margin-bottom for the file input */
+  }
+  
+  button {
     background-color: #007BFF;
-    color: #fff;
+    color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 12px; /* Adjust the padding for the button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Adjust the font size for the button */
     cursor: pointer;
-}
-
-/* Header and Footer styles */
-/* Add styles for your header and footer based on your design */
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
