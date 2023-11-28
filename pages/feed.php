@@ -19,7 +19,7 @@
         <h2>Photo Feed</h2>
         
 
-        <p>Explore the latest photos shared by our talented photographers. Click on each photo to view it in full size and learn more about the photographers and their work.</p>
+        
         <?php
             session_start(); 
             require __DIR__ . "/Doo.php";

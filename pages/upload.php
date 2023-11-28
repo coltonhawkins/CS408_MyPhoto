@@ -2,6 +2,8 @@
 session_start();
 include_once "../pages/Doo.php";
 
+$erros = array();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newFileName = $_POST['filename'];
     if (empty($newFileName)) {
@@ -66,16 +68,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             } else {
-                echo "Your file is too big!";
-                exit();
+                $errors[] = "Your file is too big!";
+                
             }
         } else {
-            echo "There was an error uploading your file!";
-            exit();
+            $errors[] = "Error: No Title or Description or FileName!";
+            
         }
     } else {
-        echo "You need to upload a proper file type (jpg, jpeg, or png)!";
-        exit();
+        $errors[] = "You need to upload a proper file type (jpg, jpeg, or png)!";
+        
     }
+}
+
+foreach ($errors as $error) {
+    echo "<p>Error: $error</p>";
 }
 ?>
