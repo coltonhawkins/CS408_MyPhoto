@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 include_once "../pages/Doo.php";
 
                 if (empty($imageTitle) || empty($imageDesc)) {
-                    header("Location: ../pages/myprofile.php?upload=empty");
+                    header("Location: ../pages/myprofile.php");
                     exit();
                 } else {
                     $sql = "SELECT * FROM gallery;";
@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-foreach ($errors as $error) {
-    echo "<p>Error: $error</p>";
-}
+// foreach ($errors as $error) {
+//     echo "<p>Error: $error</p>";
+// }
 ?>

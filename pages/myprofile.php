@@ -70,6 +70,7 @@ if(isset($_SESSION["user_id"])) {
     <section id="upload-section">
         <div class="upload-button">
             <h2>Upload a new photo</h2>
+            <div id="error-container"></div>
             <form action="upload.php" method="post" id="uploadGallery" enctype="multipart/form-data" onsubmit="return validateForm()" novalidate>
                 <input type="text" name="filename" id="filename" placeholder="File name">
                 <input type="text" name="filetitle" id="filetitle" placeholder="Image title">
