@@ -7,6 +7,11 @@ header {
     align-items: center; /* Vertically align elements */
     justify-content: flex-start; /* Align elements to the left */
 }
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
 
 header img {
     max-width: 100%; /* Ensure the image doesn't exceed its container's width */

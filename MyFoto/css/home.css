@@ -5,7 +5,9 @@ body h1,
 #welcome-section,
 #featured-photos
 {
-    font-family: Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;

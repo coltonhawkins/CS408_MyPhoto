@@ -20,6 +20,9 @@ if(isset($_SESSION["user_id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Quicksand:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body> 
     <header>
