@@ -100,4 +100,16 @@ h1 {
   button:hover {
     background-color: #0056b3;
   }
+  #error-container {
+    display: none;
+    padding: 10px;
+    background-color: #ff7f7f; /* Red background color */
+    color: #fff; /* White text color */
+    border: 2px solid #ff0000; /* Red border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    margin: 0 auto; /* Center horizontally */
+    min-width: 400px;
+}
+
   
